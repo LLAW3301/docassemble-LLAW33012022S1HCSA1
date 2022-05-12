@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.LLAW33012022S1HCSA1',
       version='',
       description=(''),
-      long_description='# docassemble.LLAW33012022S1HCSA1\n\n\n\n## Author\n\nMatthew Gunn, gunn0065@flinders.edu.au\n\n',
+      long_description='# docassemble.LLAW33012022S1HCSA1\r\n\r\n\r\n\r\n## Author\r\n\r\nMatthew Gunn, gunn0065@flinders.edu.au\r\n\r\n',
       long_description_content_type='text/markdown',
       author='Matthew Gunn',
       author_email='gunn0065@flinders.edu.au',
