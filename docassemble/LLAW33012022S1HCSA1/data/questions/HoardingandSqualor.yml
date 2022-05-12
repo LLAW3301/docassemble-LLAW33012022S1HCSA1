@@ -1,0 +1,39 @@
+#this is the page for hoarding and squalor
+---
+mandatory: True
+code: |
+  MGdisplay_welcome_screen
+  
+  MGhoarding_final_page
+---
+code: |
+  MGdisplay_welcome_screen = True
+  force_ask('MGDisplay_welcome_screen')
+---
+#This is the welcome page for when someone selects Hoarding/Squalor
+event: MGDisplay_welcome_screen
+Question: Hoarding/Squalor
+Subquestion: |
+  Living in Squalor or hoarding can be defined as a household which is filthy,     unhygenic, cluttered with personal belongings, rubbish and mess. the World Health Organisation defines hoarding as a diagnosable and treatable behavioural mental health condito
+  
+  If you are being affected by a member of the Housing Choices community who is living in squalor please click continue.
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+  - Restart: restart 
+---
+event: MGhoarding_final_page
+question: Resolving the issue
+subquestion: |
+  If your community is being affected by a community member's hoarding there are steps that you can take to address their behaviour.
+  
+  In most circumstances reporting the incident to the local council is the first step. They will send a community health officer to address community concerns.
+  
+  If there is an emergency situation as the result of the hoarding please contact police on 131 444
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+  - Restart: restart
+---

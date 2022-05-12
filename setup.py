@@ -43,8 +43,8 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.LLAW33012022S1HCSA1',
-      version='',
-      description=(''),
+      version='1',
+      description=('HSCA application'),
       long_description='# docassemble.LLAW33012022S1HCSA1\r\n\r\n\r\n\r\n## Author\r\n\r\nMatthew Gunn, gunn0065@flinders.edu.au\r\n\r\n',
       long_description_content_type='text/markdown',
       author='Matthew Gunn',
