@@ -1,0 +1,39 @@
+---
+mandatory: True
+code: |
+  MGdisplay_welcome_screen
+  
+  MGDruguse_final_page
+---
+code: |
+  MGdisplay_welcome_screen = True
+  force_ask('MGDisplay_welcome_screen')
+---
+#This is the welcome page for when someone selects DRUG USE/DEALING
+event: MGDisplay_welcome_screen
+Question: Illicit substances matrix
+Subquestion: |
+  The use of illicit substances or drug dealing is not permitted in HSCA communites.
+  
+  This is illegal activity and must be reported to both HSCA and the police. HCSA properties must *not* be used at any time for the use or trafficking of illicit substances
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+  - Restart: restart 
+---
+event: MGDruguse_final_page
+question: How to deal with drug use/drug dealing in your neighbourhood
+subquestion: |
+  If someone in your neighbourhood is involved in the use, trafficking or manufacturing   of illicit substances, both housing choices and police should be notified
+  
+  You can anonymously report the occurence via the Crime Stoppers website or contact police on 131 444
+  
+  Please inform HSCA. This can be done on 1300 312 447, or via email on infosa@hcsa.org.au
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+  - Restart: restart
+---
+
