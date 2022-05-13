@@ -23,7 +23,7 @@ buttons:
   - Continue: continue
   - Return to Issues menu: exit
     url: https://www.housingchoices.org.au/residents/south-australia
-  - Restart: restart 
+#add a back button here once integrated.
 #will revert back to Issues menu page.
 ---
 event: DHdisplay_arson_two
@@ -43,6 +43,7 @@ buttons:
     url: https://www.housingchoices.org.au/residents/south-australia
   - Further Information: exit
     url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
+back button: True    
 ---
 features:
   navigation back button: True
