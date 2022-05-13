@@ -8,7 +8,6 @@ code: |
 ---
 code: |
   DHdisplay_arson_one = True
-  force_ask('DHdisplay_arson_one')
 ---
 #This is the initial page for when someone selects Arson
 event: DHdisplay_arson_one
