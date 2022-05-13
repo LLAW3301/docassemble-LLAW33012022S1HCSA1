@@ -22,7 +22,7 @@ subquestion: |
 buttons:
   - Continue: continue
   - Return to Issues menu: exit
-    url: https://www.youtube.com/watch?v=eLWsgheI_OM
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart 
 #will revert back to Issues menu page.
 ---
@@ -35,12 +35,12 @@ subquestion: |
   
   If you are calling to report an incident that has occured, contact the police on 131 444.
   
-  If you are a victim of Arson and need support you can contact LifelIne on 13 11 14 for Councelling services.
+  If you are a victim of Arson and need support you can contact LifeLine on 13 11 14 for Councelling services.
   
   For more insight on Arson from SAPOL click on the 'Further information' link.
 buttons:
   - Return to Issues menu: exit
-    url: https://www.flinders.edu.au/
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart
   - Further Information: exit
     url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
