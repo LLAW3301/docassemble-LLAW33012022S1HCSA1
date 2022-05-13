@@ -1,0 +1,114 @@
+#this is the page for pets
+---
+mandatory: True
+code: |
+  DHdisplay_pets_one
+  
+  DHdisplay_pets_two
+  
+  aggresive_behaviour_or_attack_note
+  
+  aggresive_behaviour_or_attack
+  
+  defecation
+  
+  wandering
+---  
+code: |
+  DHdisplay_pets_one = True
+---
+#This is the initial page for when someone selects Pets
+event: DHdisplay_pets_one
+question: Pets
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  This form is to assist with neighbourhood disturbance including dangerous animals or animal activity. </div>
+  <hr>
+  
+  If you are wishing to report an issue pertaining to animal noises, please return to the issues menu.
+  
+buttons:
+  - Continue: continue
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+---
+#asking the user to select the category of information they'd like to see
+event: DHdisplay_pets_two
+question: |
+  <span class="VSSHeading">
+  What is the Animal doing? 
+  </span>
+subquestion: |
+  #####<span class="VSSDisclaimer">Please select from the information below</span> 
+#setting the buttons and their icons  
+buttons: 
+  - Aggresive Behaviour or Attack:
+      code: |
+        aggresive_behaviour_or_attack_note
+    image: Aggresive
+  - Defecation:
+      code: |
+        defecation
+    image: defecation
+  - Wandering:
+      code: |
+        wandering
+    image: wand
+---
+event: aggresive_behaviour_or_attack_note
+question: |
+  <span class="VSSHeading">
+  If you have been the victim of an attack by an animal, seek immediate medical attention 
+  </span>
+buttons:
+  - Continue:
+      code: |
+        aggresive_behaviour_or_attack  
+---
+#asking the user to select the category of information they'd like to see
+event: aggresive_behaviour_or_attack
+question: |
+  <span class="VSSHeading">
+  How to report aggresive animal behaviour or an attack 
+  </span>
+subquestion: |
+  Please report the incident to your local council immediately
+buttons:  
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+  - Back to Pets: restart 
+---
+#asking the user to select the category of information they'd like to see
+event: defecation
+question: Defecation 
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If an animal repeatedly defecates on your property report it to your local council. </div>
+  <hr>
+buttons:  
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+---
+#asking the user to select the category of information they'd like to see
+event: wandering
+question: |
+  <span class="VSSHeading">
+  Wandering 
+  </span>
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  Under s7 of the Dog and Cat Management Act 1995 (SA), an animal is considered 'wandering at large', if in a public place, not a park, or on a private property without the occupiers consent, or in a public place with no one excercising effective control either by physical restraint or command. </div>
+  <hr>
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If an animal is wandering at large in the neighbourhood, you will need to report it to your local council. </div>
+  <hr>
+buttons:
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+---
+features:
+  navigation back button: True
+  navigation: True
+---
