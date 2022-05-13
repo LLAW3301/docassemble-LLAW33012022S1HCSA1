@@ -1,0 +1,29 @@
+--- 
+# defintion of vandalism 
+mandatory: True 
+question: |
+  What form of vandalism are you experiencing? 
+fields:
+  - no label: CA_Vandalism  
+    input type: radio
+    choices:
+     - There is writing on my property 
+     - There is drawing on my property 
+     - There is damage to my property i.e. etching, scratching
+     - None of the above
+
+--- 
+mandatory: True 
+question: |
+  Which authority can I go to in order to solve this problem? 
+subquestion: |
+  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. The council will then most likley be contacted depending on where the vandalism is located. 
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+--- 
+features:
+  navigation back button: True
+  navigation: True 
+---
