@@ -30,7 +30,7 @@ subquestion: |
 buttons:
   - Continue: continue
   - Issues menu: exit
-    url: https://www.youtube.com/watch?v=eLWsgheI_OM
+    url: https://www.housingchoices.org.au/residents/south-australia
 ---
 #asking the user to select the category of information they'd like to see
 event: DHdisplay_pets_two
@@ -75,7 +75,7 @@ subquestion: |
   Please report the incident to your local council immediately
 buttons:  
   - Issues menu: exit
-    url: https://www.youtube.com/watch?v=eLWsgheI_OM
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Back to Pets: restart 
 ---
 #asking the user to select the category of information they'd like to see
@@ -87,7 +87,7 @@ subquestion: |
   <hr>
 buttons:  
   - Issues menu: exit
-    url: https://www.youtube.com/watch?v=eLWsgheI_OM
+    url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 ---
 #asking the user to select the category of information they'd like to see
@@ -105,7 +105,7 @@ subquestion: |
   <hr>
 buttons:
   - Issues menu: exit
-    url: https://www.youtube.com/watch?v=eLWsgheI_OM
+    url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 ---
 features:
