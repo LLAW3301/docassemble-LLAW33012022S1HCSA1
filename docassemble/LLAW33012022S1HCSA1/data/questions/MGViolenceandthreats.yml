@@ -1,5 +1,5 @@
-#this does not work :(
 ---
+#This code directs the user to the correct end point
 mandatory: True
 code: |
   
@@ -18,6 +18,7 @@ fields:
      - "I am a victim of violence"
      - "Someone has threatened me"
 ---
+#endpoint for violence 
 event: MGViolence_final_page
 question: How to deal with violence in your Housing Choices community 
 subquestion: |
@@ -28,6 +29,7 @@ buttons:
     url: https://www.flinders.edu.au/
   - Restart: restart
 ---
+#threat of violence endpoint
 event: MGThreats_final_page
 question: Dealing with a threat of violence in your Housing Choices Community
 subquestion: |
