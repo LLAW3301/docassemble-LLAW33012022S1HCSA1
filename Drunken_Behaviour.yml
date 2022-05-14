@@ -1,20 +1,15 @@
 ---
+#This code directs the user to the correct end point
 mandatory: True
 code: |
-  Drunken_Behaviour
+  
+  if (CA_Drunken_Behaviour == 'Become a victim of drink driving'):
+    Drunken_Behaviour
+  elif (CA_Drunken_Behaviour == 'Become a victim of abusive behaviour as a result of drunken behaviour'):
+    Drunken_Behaviour
+  elif (CA_Drunken_Behaviour == 'None of the above'):
+    Drunken_Behaviour
 ---
-code: |
-  Drunken_Behaviour = True
---- 
-# defintion of drunken behaviour
-event: Drunken_Behaviour
-question: |
-  Drunken Behaviour
-buttons:
-  - Continue: continue
-back button: True
----
-mandatory: True
 question: |
   What form of drunken behaviour are you experiencing?
 fields:
@@ -25,7 +20,7 @@ fields:
      - Become a victim of abusive behaviour as a result of drunken behaviour
      - None of the above
 ---
-mandatory: True
+event: Drunken_Behaviour 
 question: |
   Which authority can I go to in order to solve this problem? 
 subquestion: |
