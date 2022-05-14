@@ -1,4 +1,18 @@
 ---
+mandatory: True
+code: |
+  
+  if (CA_hate_crime == 'A crime involving violence based on religion'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on race'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on disability'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on ethnicity'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on gender'):
+    hate_crime_one
+---
 # defintion of hate crime
 mandatory: True 
 question: |
@@ -13,7 +27,7 @@ fields:
      - A crime involving violence based on ethnicity 
      - A crime involving violence based on gender 
 --- 
-mandatory: True 
+event: hate_crime_one 
 question: |
   Which authority can I go to in order to solve this problem? 
 subquestion: |
