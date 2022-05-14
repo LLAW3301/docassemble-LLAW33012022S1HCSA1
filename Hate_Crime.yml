@@ -1,0 +1,29 @@
+---
+# defintion of hate crime
+mandatory: True 
+question: |
+  What form of hate crime are you experiencing? 
+fields:
+  - no label: CA_hate_crime  
+    input type: radio
+    choices:
+     - A crime involving violence based on religion 
+     - A crime involving violence based on race 
+     - A crime involving violence based on disability 
+     - A crime involving violence based on ethnicity 
+     - A crime involving violence based on gender 
+--- 
+mandatory: True 
+question: |
+  Which authority can I go to in order to solve this problem? 
+subquestion: |
+  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. Depending on the seriousness of the offense Housing Choices SA may choose to involve the police if they feel its outside of their powers to resolve. 
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+--- 
+features:
+  navigation back button: True
+  navigation: True 
+---
