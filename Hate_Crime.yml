@@ -14,7 +14,6 @@ code: |
     hate_crime_one
 ---
 # defintion of hate crime
-mandatory: True 
 question: |
   What form of hate crime are you experiencing? 
 fields:
