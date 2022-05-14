@@ -1,0 +1,27 @@
+--- 
+# defintion of drunken behaviour
+mandatory: True 
+question: |
+  What form of drunken bejaviour are you experiencing? 
+fields:
+  - no label: CA_Drunken_Behaviour 
+    input type: radio
+    choices:
+     - Become a victim of drink driving 
+     - Become a victim of abusive behaviour as a result of drunken behaviour
+     - None of the above 
+--- 
+mandatory: True 
+question: |
+  Which authority can I go to in order to solve this problem? 
+subquestion: |
+  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. As drunken behviour is considered a criminal offence, HCSA may wish to involve the police to resolve the issue.
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+--- 
+features:
+  navigation back button: True
+  navigation: True 
+---
