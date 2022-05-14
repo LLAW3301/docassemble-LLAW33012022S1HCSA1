@@ -1,0 +1,402 @@
+---
+mandatory: True
+code: |
+   DHIssue_Menu
+---  
+code: |
+  DHIssue_Menu = True
+---
+#asking the user to select the category of information they'd like to see
+event: DHIssue_Menu
+question: |
+  <span class="VSSHeading">
+  Issue Menu 
+  </span>
+subquestion: |
+  #####<span class="VSSDisclaimer">Please select from the information below</span> 
+#setting the buttons and their icons  
+buttons: 
+  - Pets:
+      code: |
+        DHdisplay_pets_one
+    image: Aggresive
+  - Noise:
+      code: |
+        defecation
+    image: defecation
+  - Vandalism:
+      code: |
+        Vandalism
+    image: wand
+  - Hate Crime:
+      code: |
+        hate_crime
+    image: wand1
+  - Arson:
+      code: |
+        DHdisplay_arson_one
+    image: wand2
+  - Drunk Behaviour:
+      code: |
+        Drunken_Behaviour_one
+    image: wand3
+  - Violence:
+      code: |
+        violence
+    image: wand
+  - Hoarding:
+      code: |
+        aggresive_behaviour_or_attack_note
+    image: wand
+  - Threats of Violence:
+      code: |
+        aggresive_behaviour_or_attack_note
+    image: wand
+  - Drug Use:
+      code: |
+        aggresive_behaviour_or_attack_note
+    image: wand    
+---
+#this is the page for pets
+---
+mandatory: True
+code: |
+  DHdisplay_pets_one
+  
+  DHdisplay_pets_two
+  
+  aggresive_behaviour_or_attack_note
+  
+  aggresive_behaviour_or_attack
+  
+  defecation
+  
+  wandering
+  
+  DHdisplay_arson_one
+  
+  DHdisplay_arson_two
+  
+  Vandalism
+---
+code: |
+
+  DHdisplay_pets_one = True
+  
+  DHdisplay_pets_two = True
+  
+  aggresive_behaviour_or_attack_note = True
+  
+  aggresive_behaviour_or_attack = True
+  
+  defecation = True
+  
+  wandering = True
+  
+  Drunken_Behaviour = True  
+
+  DHdisplay_arson_one = True
+
+  DHdisplay_arson_two = True
+  
+  Vandalism = True
+---
+#This is the initial page for when someone selects Pets
+event: DHdisplay_pets_one
+question: Pets
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  This form is to assist with neighbourhood disturbance including dangerous animals or animal activity. </div>
+  <hr>
+  
+  If you are wishing to report an issue pertaining to animal noises, please return to the issues menu.
+  
+buttons:
+  - Continue:
+      code: |
+        DHdisplay_pets_two
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+---
+#asking the user to select the category of information they'd like to see
+event: DHdisplay_pets_two
+question: |
+  <span class="VSSHeading">
+  What is the Animal doing? 
+  </span>
+subquestion: |
+  #####<span class="VSSDisclaimer">Please select from the information below</span> 
+#setting the buttons and their icons  
+buttons: 
+  - Aggresive Behaviour or Attack:
+      code: |
+        aggresive_behaviour_or_attack_note
+    image: Aggresive
+  - Defecation:
+      code: |
+        defecation
+    image: defecation
+  - Wandering:
+      code: |
+        wandering
+    image: wand
+---
+event: aggresive_behaviour_or_attack_note
+question: |
+  <span class="VSSHeading">
+  If you have been the victim of an attack by an animal, seek immediate medical attention 
+  </span>
+buttons:
+  - Continue:
+      code: |
+        aggresive_behaviour_or_attack  
+---
+#asking the user to select the category of information they'd like to see
+event: aggresive_behaviour_or_attack
+question: |
+  <span class="VSSHeading">
+  How to report aggresive animal behaviour or an attack 
+  </span>
+subquestion: |
+  Please report the incident to your local council immediately
+buttons:  
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+  - Back to Pets: restart 
+---
+#asking the user to select the category of information they'd like to see
+event: defecation
+question: Defecation 
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If an animal repeatedly defecates on your property report it to your local council. </div>
+  <hr>
+buttons:  
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+---
+#asking the user to select the category of information they'd like to see
+event: wandering
+question: |
+  <span class="VSSHeading">
+  Wandering 
+  </span>
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  Under s7 of the Dog and Cat Management Act 1995 (SA), an animal is considered 'wandering at large', if in a public place, not a park, or on a private property without the occupiers consent, or in a public place with no one excercising effective control either by physical restraint or command. </div>
+  <hr>
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If an animal is wandering at large in the neighbourhood, you will need to report it to your local council. </div>
+  <hr>
+buttons:
+  - Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+---
+features:
+  navigation back button: True
+  navigation: True
+---
+#this is the page for arson
+---
+#This is the initial page for Arson
+event: DHdisplay_arson_one
+question: Arson
+subquestion: |
+  Arson is when property or motor vehicles are unlawfully damaged by fire or explosives.
+  
+  IT IS A SERIOUS OFFENCE and can be very scary for the victims involved.
+  
+  IF you have witnessed or experinced arson at a HCSA property, please select CONTINUE.
+  
+buttons:
+  - Continue:
+      code: |
+        DHdisplay_arson_two
+  - Return to Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+#add a back button here once integrated.
+#will revert back to Issues menu page.
+---
+event: DHdisplay_arson_two
+question: Reporting arson.
+subquestion: |
+  Due to the seriousness of arson, the authorities must be alerted immediatly.
+  
+  If it is occuring immediatly, contact 000 for both police and fire fighting services.
+  
+  If you are calling to report an incident that has occured, contact the police on 131 444.
+  
+  If you are a victim of Arson and need support you can contact LifeLine on 13 11 14 for Councelling services.
+  
+  For more insight on Arson from SAPOL click on the 'Further information' link.
+buttons:
+  - Return to Issues menu: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+  - Further Information: exit
+    url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
+back button: True    
+---
+features:
+  navigation back button: True
+  navigation: True
+---
+#This code directs the user to the correct end point
+event: Drunken_Behaviour_one
+mandatory: True
+code: |
+  
+  if (CA_Drunken_Behaviour == 'Become a victim of drink driving'):
+    Drunken_Behaviour
+  elif (CA_Drunken_Behaviour == 'Become a victim of abusive behaviour as a result of drunken behaviour'):
+    Drunken_Behaviour
+  elif (CA_Drunken_Behaviour == 'None of the above'):
+    Drunken_Behaviour
+---
+question: |
+  What form of drunken behaviour are you experiencing?
+fields:
+  - no label: CA_Drunken_Behaviour 
+    input type: radio
+    choices:
+     - Become a victim of drink driving 
+     - Become a victim of abusive behaviour as a result of drunken behaviour
+     - None of the above
+---
+event: Drunken_Behaviour 
+question: |
+  Which authority can I go to in order to solve this problem? 
+subquestion: |
+  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. As drunken behviour is considered a criminal offence, HCSA may wish to involve the police to resolve the issue.
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+--- 
+features:
+  navigation back button: True
+  navigation: True 
+---
+event: violence
+mandatory: True
+code: |
+  
+  if (MG_typeofviolence == 'I am a victim of violence'):
+    MGViolence_final_page
+  elif (MG_typeofviolence == 'Someone has threatened me'):
+    MGThreats_final_page
+---
+#This page prompts the user to select either violence or threats of violence
+question: What is happening?
+fields:
+  - no label: MG_typeofviolence
+    input type: radio
+    choices:
+     - "I am a victim of violence"
+     - "Someone has threatened me"
+---
+#endpoint for violence 
+event: MGViolence_final_page
+question: How to deal with violence in your Housing Choices community 
+subquestion: |
+  Blah blah blah violence
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+  - Restart: restart
+---
+#threat of violence endpoint
+event: MGThreats_final_page
+question: Dealing with a threat of violence in your Housing Choices Community
+subquestion: |
+  blah blah blah
+  
+buttons:
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+  - Restart: restart
+---
+event: hate_crime
+mandatory: True
+code: |
+  
+  if (CA_hate_crime == 'A crime involving violence based on religion'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on race'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on disability'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on ethnicity'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on gender'):
+    hate_crime_one
+---
+# defintion of hate crime
+question: |
+  What form of hate crime are you experiencing? 
+fields:
+  - no label: CA_hate_crime  
+    input type: radio
+    choices:
+     - A crime involving violence based on religion 
+     - A crime involving violence based on race 
+     - A crime involving violence based on disability 
+     - A crime involving violence based on ethnicity 
+     - A crime involving violence based on gender 
+--- 
+event: hate_crime_one 
+question: |
+  Which authority can I go to in order to solve this problem? 
+subquestion: |
+  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. Depending on the seriousness of the offense Housing Choices SA may choose to involve the police if they feel its outside of their powers to resolve. 
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+--- 
+features:
+  navigation back button: True
+  navigation: True 
+---
+event: Vandalism
+mandatory: True
+code: |
+  
+  if (CA_Vandalism == 'There is writing on my property'):
+    vandalism_one
+  elif (CA_Vandalism == 'There is drawing on my property'):
+    vandalism_one
+  elif (CA_Vandalism == 'There is damage to my property i.e. etching, scratching'):
+    vandalism_one
+  elif (CA_Vandalism == 'None of the above'):
+    vandalism_one
+--- 
+# defintion of vandalism  
+question: |
+  What form of vandalism are you experiencing? 
+fields:
+  - no label: CA_Vandalism  
+    input type: radio
+    choices:
+     - There is writing on my property 
+     - There is drawing on my property 
+     - There is damage to my property i.e. etching, scratching
+     - None of the above
+
+--- 
+event: vandalism_one 
+question: |
+  Which authority can I go to in order to solve this problem? 
+subquestion: |
+  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. The council will then most likley be contacted depending on where the vandalism is located. 
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+--- 
+features:
+  navigation back button: True
+  navigation: True 
+---
