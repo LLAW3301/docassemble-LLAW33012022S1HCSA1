@@ -1,17 +1,31 @@
+---
+mandatory: True
+code: |
+  Drunken_Behaviour
+---
+code: |
+  Drunken_Behaviour = True
 --- 
 # defintion of drunken behaviour
-mandatory: True 
+event: Drunken_Behaviour
 question: |
-  What form of drunken behaviour are you experiencing? 
+  Drunken Behaviour
+buttons:
+  - Continue: continue
+back button: True
+---
+mandatory: True
+question: |
+  What form of drunken behaviour are you experiencing?
 fields:
   - no label: CA_Drunken_Behaviour 
     input type: radio
     choices:
      - Become a victim of drink driving 
      - Become a victim of abusive behaviour as a result of drunken behaviour
-     - None of the above 
---- 
-mandatory: True 
+     - None of the above
+---
+mandatory: True
 question: |
   Which authority can I go to in order to solve this problem? 
 subquestion: |
