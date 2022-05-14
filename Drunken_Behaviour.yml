@@ -2,7 +2,7 @@
 # defintion of drunken behaviour
 mandatory: True 
 question: |
-  What form of drunken bejaviour are you experiencing? 
+  What form of drunken behaviour are you experiencing? 
 fields:
   - no label: CA_Drunken_Behaviour 
     input type: radio
