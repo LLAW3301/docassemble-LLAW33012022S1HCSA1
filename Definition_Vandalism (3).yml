@@ -1,6 +1,17 @@
+---
+mandatory: True
+code: |
+  
+  if (CA_Vandalism == 'There is writing on my property'):
+    vandalism_one
+  elif (CA_Vandalism == 'There is drawing on my property'):
+    vandalism_one
+  elif (CA_Vandalism == 'There is damage to my property i.e. etching, scratching'):
+    vandalism_one
+  elif (CA_Vandalism == 'None of the above'):
+    vandalism_one
 --- 
-# defintion of vandalism 
-mandatory: True 
+# defintion of vandalism  
 question: |
   What form of vandalism are you experiencing? 
 fields:
@@ -13,7 +24,7 @@ fields:
      - None of the above
 
 --- 
-mandatory: True 
+event: vandalism_one 
 question: |
   Which authority can I go to in order to solve this problem? 
 subquestion: |
