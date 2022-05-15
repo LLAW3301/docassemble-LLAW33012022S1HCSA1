@@ -71,7 +71,7 @@ buttons:
   - Continue:
       code: |
         DHdisplay_pets_two
-  - Issues menu: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 ---
 #asking the user to select the category of information they'd like to see
@@ -116,7 +116,7 @@ question: |
 subquestion: |
   Please report the incident to your local council immediately
 buttons:  
-  - Issues menu: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
   - Back to Pets: restart 
 ---
@@ -128,7 +128,7 @@ subquestion: |
   If an animal repeatedly defecates on your property report it to your local council. </div>
   <hr>
 buttons:  
-  - Issues menu: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 ---
@@ -146,7 +146,7 @@ subquestion: |
   If an animal is wandering at large in the neighbourhood, you will need to report it to your local council. </div>
   <hr>
 buttons:
-  - Issues menu: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 ---
@@ -166,7 +166,7 @@ buttons:
   - Continue:
       code: |
         DHdisplay_arson_two
-  - Return to Issues menu: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 #add a back button here once integrated.
 #will revert back to Issues menu page.
@@ -184,7 +184,7 @@ subquestion: |
   
   For more insight on Arson from SAPOL click on the 'Further information' link.
 buttons:
-  - Return to Issues menu: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
   - Further Information: exit
     url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
@@ -218,7 +218,7 @@ question: |
 subquestion: |
   You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. As drunken behviour is considered a criminal offence, HCSA may wish to involve the police to resolve the issue.
 buttons:
-  - return: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 --- 
@@ -246,8 +246,8 @@ question: How to deal with violence in your Housing Choices community
 subquestion: |
   Blah blah blah violence
 buttons:
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart
 ---
 #threat of violence endpoint
@@ -257,8 +257,8 @@ subquestion: |
   blah blah blah
   
 buttons:
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart
 ---
 event: hate_crime
@@ -295,7 +295,7 @@ question: |
 subquestion: |
   You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. Depending on the seriousness of the offense Housing Choices SA may choose to involve the police if they feel its outside of their powers to resolve. 
 buttons:
-  - return: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 --- 
@@ -331,7 +331,7 @@ question: |
 subquestion: |
   You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. The council will then most likley be contacted depending on where the vandalism is located. 
 buttons:
-  - return: exit
+  - HCSA: exit
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 --- 
@@ -346,8 +346,8 @@ buttons:
   - Continue:
       code: |
         MGDruguse_final_page
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart 
 ---
 event: MGDruguse_final_page
@@ -359,8 +359,8 @@ subquestion: |
   
   Please inform HSCA. This can be done on 1300 312 447, or via email on infosa@hcsa.org.au
 buttons:
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart
 ---
 #This is the welcome page for when someone selects Hoarding/Squalor
@@ -374,8 +374,8 @@ buttons:
   - Continue:
       code: |
         MGhoarding_final_page
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart 
 ---
 event: MGhoarding_final_page
@@ -387,8 +387,8 @@ subquestion: |
   
   If there is an emergency situation as the result of the hoarding please contact police on 131 444
 buttons:
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - Restart: restart
 ---
 event: MGnoise_welcome_page
@@ -404,8 +404,8 @@ buttons:
       code: |
         Noise_code_one
   - Restart: restart
-  - Exit: exit
-    url: https://housingchoices.org.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
 ---
 #This code directs the user to the correct end point
 event: Noise_code_one
@@ -468,8 +468,8 @@ subquestion: |
 buttons:
   - Continue: continue
   - Restart: restart
-  - Exit: exit
-    url: https://housingchoices.org.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
 ---
 #Domestic activity and construction noise between 8pm and 8am
 event: MG8pm_8am
@@ -478,7 +478,7 @@ subquestion: |
   If **domestic activity and construction noise** occur between 8pm and 8am, contact your local council immediately to report the issue. The exit button will take you to a list of local councils in South Australia
 buttons:
   - Continue: continue
-  - Exit: exit
+  - Local Councils: exit
     url: https://www.lga.sa.gov.au/sa-councils/councils-listing
   - Restart: restart
 ---
@@ -513,8 +513,8 @@ question: Verbal Noise and Vehicles
 subquestion: |
   If vehicle or verbal noise is persistant and ongoing please report the matter to the police on 131 444.
 buttons:
-  - exit: exit
-    url: https://www.housingchoices.org.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - restart: restart
 ---
 event: MGanimal_noise
@@ -527,7 +527,7 @@ subquestion: |
   if you wish to consider council control orders, press restart to return to the issues menu and select 'pets'
   
 buttons:
-  - exit: exit
+  - HCSA advice: exit
     url: https://www.housingchoices.org.au/residents/south-australia/being-a-good-neighbour
   - restart: restart
 ---
@@ -536,7 +536,7 @@ question: Noise from organisations
 subquestion: |
   Noise from an organisation such as a sporting club, a community meeting, or businesses must be discussed with the organisation directly.
 buttons:
-  - exit: exit
-    url: https://www.housingchoices.org.au/
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
   - restart: restart
 ---
