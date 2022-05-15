@@ -219,6 +219,7 @@ subquestion: |
   **IT IS A CRIMINAL OFFENCE** You can find out more by clicking more information.
   
   IF you have witnessed or experinced arson at a HCSA property, please select CONTINUE.
+
   
 buttons:
   - Continue:
@@ -333,6 +334,8 @@ code: |
     hate_crime_one
   elif (CA_hate_crime == 'A crime involving violence based on gender'):
     hate_crime_one
+  elif (CA_hate_crime == 'I do not know but I would like some information on hate crime'):
+    hate_crime_one    
 ---
 # defintion of hate crime
 question: |
@@ -345,16 +348,38 @@ fields:
      - A crime involving violence based on race 
      - A crime involving violence based on disability 
      - A crime involving violence based on ethnicity 
-     - A crime involving violence based on gender 
+     - A crime involving violence based on gender
+     - I do not know but I would like some information on hate crime
 --- 
 event: hate_crime_one 
 question: |
-  Which authority can I go to in order to solve this problem? 
+  Hate Crime Information. 
 subquestion: |
-  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. Depending on the seriousness of the offense Housing Choices SA may choose to involve the police if they feel its outside of their powers to resolve. 
+  Hate crime is a criminal offence committed against a person or property that is prompted in whole or in part by an offender's prejudice against a specific group of people. It includes discrimination against;
+
+  * Sex
+
+  * Race
+
+  * Age
+
+  * Disability
+
+  * Ethnicity
+
+  * religion
+  
+  <hr>
+
+  **If you have been a victim of hate crime, it is a police matter. If this happens to you, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:13 14 44">13 14 44</a> .**
+
+  * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
+
+  * If you would like to return to the main menu, please click menu.
 buttons:
-  - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - MENU: restart  
 back button: True
 --- 
 event: Vandalism
@@ -385,12 +410,27 @@ fields:
 --- 
 event: vandalism_one 
 question: |
-  Which authority can I go to in order to solve this problem? 
+  Vandalism 
 subquestion: |
-  You will need to inform Housing Choices South Australia (HCSA). This can be done on 1300 312 447 or via email on infosa@hcsa.org.au. The council will then most likley be contacted depending on where the vandalism is located. 
+  Vandalism is ‘only illegal if it is done without the owner’s permission’. ‘This would include 
+  * writing, 
+  * drawing, 
+  * marking, 
+  * scratching, 
+  * etching, or 
+  * posting something on someone else’s property without their permission’. 
+  
+  [More info](<https://lsc.sa.gov.au/cb_pages/young_people_and_graffiti.php)
+  <hr>
+  If you have been a victim of vandalism and require support you will need to inform Housing Choices SA on <a href="tel:1300 312 447">1300 312 447</a>  or via email on [infosa@hcsa.org.au](mailto:infosa@hcsa.org.au)
+
+  * If you would like to be redirected to the Housing Choices South Australia contact page, please click HCSA.
+
+  * If you would like to return to the main menu, please click menu. 
 buttons:
   - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
+    url: https://www.housingchoices.org.au/contact-us-1
+  - MENU: restart  
 back button: True
 --- 
 #This is the welcome page for when someone selects DRUG USE/DEALING
