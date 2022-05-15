@@ -540,3 +540,15 @@ buttons:
     url: https://www.housingchoices.org.au/residents/south-australia
   - restart: restart
 ---
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib-site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: right">
+    <cite><small><i>
+    Developed by Flinders University in collaboration with Housing Choices SA
+    </i></small></cite>
+    </div>
+    </div>
+---
