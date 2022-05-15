@@ -2,16 +2,16 @@
 ---
 mandatory: True
 code: |
-  MGdisplay_welcome_screen
+  MGdisplay_hoarding_screen
   
   MGhoarding_final_page
 ---
 code: |
-  MGdisplay_welcome_screen = True
+  MGdisplay_hoarding_screen = True
   force_ask('MGDisplay_welcome_screen')
 ---
 #This is the welcome page for when someone selects Hoarding/Squalor
-event: MGDisplay_welcome_screen
+event: MGDisplay_hoarding_screen
 Question: Hoarding/Squalor
 Subquestion: |
   Living in Squalor or hoarding can be defined as a household which is filthy,     unhygenic, cluttered with personal belongings, rubbish and mess. the World Health Organisation defines hoarding as a diagnosable and treatable behavioural mental health condito
