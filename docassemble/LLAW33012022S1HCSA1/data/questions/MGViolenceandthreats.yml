@@ -38,51 +38,60 @@ subquestion: |
   * Slapping
   * Tripping 
   
-  **Violence is a police matter and is a criminal offence. If this happens to you, you should contact the police IMMEDIATELY on 131 444, and inform them if you are concerned about your safety.**
+  <hr/>  
   
-  if you have experienced any of the above, click continue to be redirected to the South Australia police website
+  **Violence is a police matter and is a criminal offence. If this happens to you, you should contact the police IMMEDIATELY on <a href="tel:131 444">13 14 44</a> , and inform them if you are concerned about your safety.**
   
-  If you would like to return to the main menu press restart
-
-
+  <hr/>
+  * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
+  
 buttons:
-  - Continue: exit
+  - SAPOL: exit
     url: https://www.police.sa.gov.au/
-  - Exit: exit
+  - HCSA: exit
     url: https://housingchoices.org.au/
-  - Restart: restart
----
+  - Menu: restart
+--- 
 #threat of violence endpoint
 event: MGThreats_final_page
 question: Dealing with a threat of violence in your Housing Choices Community
 subquestion: |
   A threat is any communication indicating an intention to cause harm. Threats of         violence can look like different things it can be either direct or indirect
-
+  
   * Written
+  
   * Spoken
+  
   * By conduct
+  
   * Partially by words and partially by conduct
-
+  
   An example of a threat of violence could be
-
   "I want to kill you" this shows and intent cause harm, whereas "I feel like I could     kill you" could be interpreted as an expression of emotions.
-
   Other examples could be
-
+  
   * I will break your arm
+  
   * Watch your back
-  * You do not want to mess with me 
-
-  **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on 131 444, and inform them if you are concerned about your safety.**
-
-  Click continue to be redirected to the SA Police website.
-
-  If you would like to return to the main menu, please click menu.
+  
+  * You do not want to mess with me
+  <hr/>  
+  **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on <a href="tel:13 14 44">13 14 44</a> , and inform them if you are concerned about your safety.**
+  <hr/>
+  * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
   
 buttons:
-  - Continue: exit
+  - SAPOL: exit
     url: https://www.police.sa.gov.au/
-  - Exit: exit
+  - HCSA: exit
     url: https://housingchoices.org.au/
-  - Restart: restart
----
+  - Menu: restart
+--- 
