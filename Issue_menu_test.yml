@@ -152,13 +152,13 @@ back button: True
 ---
 #this is the page for arson
 ---
-#This is the initial page for Arson
+#This is the initial page for Arson Completed by Daniel Hill-Brown
 event: DHdisplay_arson_one
 question: Arson
 subquestion: |
-  Arson is when property or motor vehicles are unlawfully damaged by fire or explosives.
+  Arson is when property or motor vehicles are either intentionally or recklessly damaged. It is a serious offence and can be very scary for victims involved.
   
-  IT IS A SERIOUS OFFENCE and can be very scary for the victims involved.
+  **IT IS A CRIMINAL OFFENCE** You can find out more by clicking more information.
   
   IF you have witnessed or experinced arson at a HCSA property, please select CONTINUE.
   
@@ -166,26 +166,26 @@ buttons:
   - Continue:
       code: |
         DHdisplay_arson_two
-  - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
-#add a back button here once integrated.
-#will revert back to Issues menu page.
+  - More information: exit
+    url: http://classic.austlii.edu.au/au/legis/sa/consol_act/clca1935262/s85.html#:~:text=(b)%20being%20recklessly%20indifferent%20as,Maximum%20penalty%3A%20Imprisonment%20for%20life.
+back button: True 
 ---
 event: DHdisplay_arson_two
 question: Reporting arson.
 subquestion: |
-  Due to the seriousness of arson, the authorities must be alerted immediatly.
-  
-  If it is occuring immediatly, contact 000 for both police and fire fighting services.
-  
-  If you are calling to report an incident that has occured, contact the police on 131 444.
-  
-  If you are a victim of Arson and need support you can contact LifeLine on 13 11 14 for Councelling services.
-  
-  For more insight on Arson from SAPOL click on the 'Further information' link.
+ **Arson is a police matter. If you are reporting a current incident, please IMMEDIATELY contact both Police and Fire Fighters on 000.**
+
+ **If you have been a victim of arson and require support we recommend you contact Lifeline on 13 11 14 for counselling services.**
+
+ If you would like to be redirected to Lifeline Website, please click continue.
+
+ If you would like to return to the main menu, please click menu.
+ 
+ For further information on Arson from SAPOL, please click more information.
 buttons:
-  - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
+  - Continue: exit
+    url: https://www.lifeline.org.au/
+  - MENU: restart  
   - Further Information: exit
     url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
 back button: True    
