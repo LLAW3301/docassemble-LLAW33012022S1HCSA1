@@ -10,12 +10,15 @@ subquestion: |
   
   Please select continue to begin, or menu to return to the issues menu
 buttons:
-  - Continue: continue
+  - Continue:
+      code: |
+        noise_two
   - Menu: restart
   - Exit: exit
     url: https://housingchoices.org.au/
 ---
 #This code directs the user to the correct end point
+event: noise_two
 mandatory: True
 code: |
  
