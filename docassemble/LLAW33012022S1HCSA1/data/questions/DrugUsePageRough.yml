@@ -31,7 +31,6 @@ subquestion: |
   
   Please inform HSCA. This can be done on 1300 312 447, or via email on infosa@hcsa.org.au
 buttons:
-  - Continue: continue
   - Exit: exit
     url: https://www.flinders.edu.au/
   - Restart: restart
