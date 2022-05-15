@@ -515,29 +515,32 @@ buttons:
 event: MGDisplay_hoarding_screen
 Question: Hoarding/Squalor
 Subquestion: |
-  Living in Squalor or hoarding can be defined as a household which is filthy,     unhygenic, cluttered with personal belongings, rubbish and mess. the World Health Organisation defines hoarding as a diagnosable and treatable behavioural mental health condito
+  A severe domestic squalor can be defined as a household which is filthy, unhygienic, and cluttered full of personal belongings, rubbish and mess. For more information, please click, SA info on squalor.
   
   If you are being affected by a member of the Housing Choices community who is living in squalor please click continue.
 buttons:
   - Continue:
       code: |
         MGhoarding_final_page
-  - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
-  - Restart: restart 
+  - SA info on squalor: exit
+    url: https://www.sahealth.sa.gov.au/ wps/ wcm/connect/f8561b804fbc211e98559a5cbc1ea1e9/Hoarding+Guideline_FINAL_23_Aug_13.pdf?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE-f8561b804fbc211e98559a5cbc1ea1e9-nKKagdo
+  - Menu: restart 
 ---
 event: MGhoarding_final_page
 question: Resolving the issue
 subquestion: |
-  If your community is being affected by a community member's hoarding there are steps that you can take to address their behaviour.
-  
-  In most circumstances reporting the incident to the local council is the first step. They will send a community health officer to address community concerns.
-  
-  If there is an emergency situation as the result of the hoarding please contact police on 131 444
+  In most cases if you believe that your neighbour is a severe hoarder, please contact SA Health, who can connect you to an Environmental Health Officer (EHO) to address community concerns [here](https://www.eha.sa.gov.au/public-health/hoarding-and-squalor).
+
+  **If you believe it is an emergency, you need to contact the Police IMMEDIATELY to file a report on <a href="131 444">13 14 44</a>.**
+  <hr>
+
+  * If you would like to be redirected to the contact information for Environmental Health Officers, please click continue.
+
+  * If you would like to return to the main menu, please click menu.
 buttons:
-  - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
-  - Restart: restart
+  - Continue: exit
+    url: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/public+health/environmental+health+officers/environmental+health+officers
+  - Menu: restart
 ---
 event: MGnoise_welcome_page
 question: Got noisy neighbours?
