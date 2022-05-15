@@ -11,7 +11,7 @@ code: |
 ---
 #This is the welcome page for when someone selects DRUG USE/DEALING
 event: MGDisplay_welcome_screen
-Question: Illicit substances matrix
+Question: Illicit substances
 Subquestion: |
   The use of illicit substances or drug dealing is not permitted in HSCA communites.
   
@@ -27,12 +27,15 @@ question: How to deal with drug use/drug dealing in your neighbourhood
 subquestion: |
   If someone in your neighbourhood is involved in the use, trafficking or manufacturing   of illicit substances, both housing choices and police should be notified
   
-  You can anonymously report the occurence via the Crime Stoppers website or contact police on 131 444
+  **You can anonymously report the occurence via the Crime Stoppers on 	1800 333 000 or contact police on 131 444**
   
-  Please inform HSCA. This can be done on 1300 312 447, or via email on infosa@hcsa.org.au
+  Please inform HSCA. This can be done on 1300 312 447, or via email on infosa@hcsa.org.au. Click contact HCSA below to be redirected to Housing Choices contact page.
+
+  Click restart to return to the issues menu.
+  
 buttons:
-  - Exit: exit
-    url: https://www.flinders.edu.au/
+  - Contact HCSA: exit
+    url: https://www.housingchoices.org.au/contact-us-1
   - Restart: restart
 ---
 

@@ -9,7 +9,7 @@ code: |
     MGThreats_final_page
 ---
 #This page prompts the user to select either violence or threats of violence
-question: What is happening?
+question: What has happened?
 fields:
   - no label: MG_typeofviolence
     input type: radio
@@ -21,28 +21,30 @@ fields:
 event: MGViolence_final_page
 question: How to deal with violence in your Housing Choices community 
 subquestion: |
+  Violence means any violent conduct. This can be towards property or a person. The conduct does not necessarily have to cause or be intended to have caused injury or damage. It includes any other kind of violent conduct. 
+  
+  An example of violence could be
+  
+  * Throwing an object capable of causing injury at, or towards a person.
+  
+  Other examples are
+  
+  * Choking
+  * Grabbing
+  * Hitting
+  * Kicking
+  * Pinching
+  * Shoving
+  * Slapping
+  * Tripping 
+  
+  **Violence is a police matter and is a criminal offence. If this happens to you, you should contact the police IMMEDIATELY on 131 444, and inform them if you are concerned about your safety.**
+  
+  if you have experienced any of the above, click continue to be redirected to the South Australia police website
+  
+  If you would like to return to the main menu press restart
 
-  Violence means any violent conduct; this can be towards property or a person. The       conduct does not necessarily have to cause or intended to cause injury or damage but     includes any other violent conduct.
 
-  An example of violence could be:
-
-  Throwing an object at capable of causing injury, or towards, a person. Whether it hits the person or falls short does not matter.
-
-  Other examples could be:
-
- * Grabbing
- * Hitting
- * Kicking
- * Pinching
- * Shoving
- * Slapping
- * Tripping
-
-  **Violence is a police matter and is a criminal offence. If this happens to you, you   need to contact the Police IMMEDIATELY on 13 13 44, and inform them if you are     concerned about your safety.**
-
-  If you have experienced any of the above, click continue to be redirected to the SA Police website.
-
-  If you would like to return to the main menu, please click menu.
 buttons:
   - Continue: exit
     url: https://www.police.sa.gov.au/
@@ -54,24 +56,24 @@ buttons:
 event: MGThreats_final_page
 question: Dealing with a threat of violence in your Housing Choices Community
 subquestion: |
-  A threat is any communication indicating an intention to cause harm. Threats of violence can look like different things it can be either direct or indirect:
+  A threat is any communication indicating an intention to cause harm. Threats of         violence can look like different things it can be either direct or indirect
 
-  *Written
-  *Spoken
-  *By conduct
-  *Partially by words and partially by conduct
+  * Written
+  * Spoken
+  * By conduct
+  * Partially by words and partially by conduct
 
-  An example of a threat of violence could be:
+  An example of a threat of violence could be
 
-  "I want to kill you" this shows and intent cause harm, whereas "I feel like I could kill you" could be interpreted as an expression of emotions.
+  "I want to kill you" this shows and intent cause harm, whereas "I feel like I could     kill you" could be interpreted as an expression of emotions.
 
-  Other examples could be:
+  Other examples could be
 
-  *"I will break your arm"
-  *"Watch your back"
-  *"You do not want to mess with me"
+  * I will break your arm
+  * Watch your back
+  * You do not want to mess with me 
 
-  **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on 13 13 44, and inform them if you are concerned about your safety.**
+  **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on 131 444, and inform them if you are concerned about your safety.**
 
   Click continue to be redirected to the SA Police website.
 
@@ -81,6 +83,6 @@ buttons:
   - Continue: exit
     url: https://www.police.sa.gov.au/
   - Exit: exit
-    url: https://www.flinders.edu.au/
+    url: https://housingchoices.org.au/
   - Restart: restart
 ---
