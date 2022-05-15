@@ -53,50 +53,6 @@ buttons:
         MGDisplay_Drugs
     image: wand    
 ---
-#this is the page for pets
----
-mandatory: True
-code: |
-  DHdisplay_pets_one
-  
-  DHdisplay_pets_two
-  
-  aggresive_behaviour_or_attack_note
-  
-  aggresive_behaviour_or_attack
-  
-  defecation
-  
-  wandering
-  
-  DHdisplay_arson_one
-  
-  DHdisplay_arson_two
-  
-  Vandalism
----
-code: |
-
-  DHdisplay_pets_one = True
-  
-  DHdisplay_pets_two = True
-  
-  aggresive_behaviour_or_attack_note = True
-  
-  aggresive_behaviour_or_attack = True
-  
-  defecation = True
-  
-  wandering = True
-  
-  Drunken_Behaviour = True  
-
-  DHdisplay_arson_one = True
-
-  DHdisplay_arson_two = True
-  
-  Vandalism = True
----
 #This is the initial page for when someone selects Pets
 event: DHdisplay_pets_one
 question: Pets
