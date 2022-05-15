@@ -53,6 +53,10 @@ buttons:
         MGDisplay_Drugs
     image: wand    
 ---
+features:
+  navigation back button: True
+  navigation: True
+---
 #This is the initial page for when someone selects Pets
 event: DHdisplay_pets_one
 question: Pets
@@ -146,10 +150,6 @@ buttons:
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 ---
-features:
-  navigation back button: True
-  navigation: True
----
 #this is the page for arson
 ---
 #This is the initial page for Arson
@@ -190,10 +190,6 @@ buttons:
     url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
 back button: True    
 ---
-features:
-  navigation back button: True
-  navigation: True
----
 #This code directs the user to the correct end point
 event: Drunken_Behaviour_one
 mandatory: True
@@ -226,10 +222,6 @@ buttons:
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 --- 
-features:
-  navigation back button: True
-  navigation: True 
----
 event: violence
 mandatory: True
 code: |
@@ -307,10 +299,6 @@ buttons:
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 --- 
-features:
-  navigation back button: True
-  navigation: True 
----
 event: Vandalism
 mandatory: True
 code: |
@@ -347,10 +335,6 @@ buttons:
     url: https://www.housingchoices.org.au/residents/south-australia
 back button: True
 --- 
-features:
-  navigation back button: True
-  navigation: True 
----
 #This is the welcome page for when someone selects DRUG USE/DEALING
 event: MGDisplay_Drugs
 Question: Illicit substances matrix
