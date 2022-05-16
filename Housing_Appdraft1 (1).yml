@@ -1,0 +1,826 @@
+---
+mandatory: true
+question: Welcome to *Better Tenant*
+subquestion: | 
+  **Better Tenant** is here to guide you to the appropriate authorities if you are
+  experiencing a significant distrubance in your neighbourhood.
+  
+  Throughout this application there will be a variety of questions regarding the 
+  circumstances you are facing. If at any point you are unsure of the definition
+  or meaning of a word or term, hover your mouse over it to see the definitions. 
+  
+  **disclaimer** No information or output from this application is to be taken as 
+  formal legal advice. If you are advised to take legal action, please consult with 
+  a lawyer or legal aid regarding your circumstances. 
+  
+  We look forward to helping you out. 
+buttons:
+  - Continue: continue
+  - Exit: exit
+---
+mandatory: true
+question: Personal Details
+subquestion: |
+  We need to collect some information about your living situation. 
+  Please answer all questions.
+  
+  Please Note that your personal information is protected by law, including the 
+  *Privacy  Act* of 1988.
+fields:
+  - What is your name?: CGBname
+    datatype: string
+  - What is your age?: CGBage
+    datatype: integer
+  - Where do you Live?: CGBstate
+    datatype: radio
+    choices:
+      - Western Australia
+      - Northern Territory
+      - South Australia
+      - Queensland
+      - Australian Capital Territory
+      - New South Wales
+      - Victoria
+      - Tasmania
+---
+mandatory: true
+code: |
+  if CGBstate == 'South Australia':
+    CGBprovider
+  else:
+    userineligible
+---
+event: userineligible
+question: This app is currently unavailable in your region.
+subquestion: |
+  Unfortunately this app is not calibrated for your state. 
+  If you would like to see something similar produced for your state,
+  please contact your regional Housing Choices body.
+buttons:
+  - restart: restart
+  - exit: exit
+---
+question: Housing Provider
+fields:
+  - Who is your Housing Provider?: CGBprovider
+    datatype: radio
+    choices:
+      - Housing SA
+      - Anglicare
+      - Cornerstone
+      - Housing Choices SA
+      - Government Housing
+      - Other
+---
+mandatory: true
+code: |
+  if CGBprovider == 'Housing Choices SA':
+    OFDname
+  else:
+    providerineligible
+---
+event: providerineligible
+question: oops 
+subquestion: |
+  Sorry!
+  
+  This service is currently limited to Housing Choices SA tenants. 
+buttons:
+  - exit: exit
+  - restart: restart
+---
+mandatory: true
+question: Offender Details
+subquestion: |
+  Please enter the details of the offender who is disturbing the community. 
+fields:
+  - Name: OFDname
+    required: false
+  - Age: OFDage
+    datatype: integer
+    required: false
+  - Address: OFDaddress
+  - Suburb: OFDsuburb
+  - Postcode: OFDpostcode
+---
+mandatory: True
+code: |
+   DHIssue_Menu
+---  
+code: |
+  DHIssue_Menu = True
+---
+#asking the user to select the category of information they'd like to see
+event: DHIssue_Menu
+question: |
+  <span class="VSSHeading">
+  Issue Menu 
+  </span>
+subquestion: |
+  #####<span class="VSSDisclaimer">Please select from the information below</span> 
+#setting the buttons and their icons  
+buttons: 
+  - Pets:
+      code: |
+        DHdisplay_pets_one
+    image: Aggresive
+  - Noise:
+      code: |
+        MGnoise_welcome_page
+    image: defecation
+  - Vandalism:
+      code: |
+        Vandalism
+    image: wand
+  - Hate Crime:
+      code: |
+        hate_crime
+    image: wand1
+  - Arson:
+      code: |
+        DHdisplay_arson_one
+    image: wand2
+  - Drunk Behaviour:
+      code: |
+        Drunken_Behaviour_one
+    image: wand3
+  - Violence:
+      code: |
+        violence
+    image: wand
+  - Hoarding:
+      code: |
+        MGDisplay_hoarding_screen
+    image: wand
+  - Drug Use:
+      code: |
+        MGDisplay_Drugs
+    image: wand    
+---
+features:
+  navigation back button: True
+  navigation: True
+---
+#This is the initial page for when someone selects Pets
+event: DHdisplay_pets_one
+question: Pets
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  This form is to assist with neighbourhood disturbances including dangerous animals or animal activity. </div>
+  <hr>
+  
+  * If the issue you are wishing to report is pertaining to **animal noise**, please select back then ‘noise’.;
+  
+  * If you would like to be redirected to the Housing Choices South Australia contact page, please click HCSA.
+buttons:
+  - Continue:
+      code: |
+        DHdisplay_pets_two
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/contact-us-1
+back button: True
+---
+#asking the user to select the category of information they'd like to see
+event: DHdisplay_pets_two
+question: |
+  <span class="VSSHeading">
+  What is the Animal behaviour that you are experiencing? 
+  </span>
+subquestion: |
+  #####<span class="VSSDisclaimer">Please select from the information below</span> 
+#setting the buttons and their icons  
+buttons: 
+  - Aggresive Behaviour or Attack:
+      code: |
+        aggresive_behaviour_or_attack_note
+    image: Aggresive
+  - Defecation:
+      code: |
+        defecation
+    image: defecation
+  - Wandering:
+      code: |
+        wandering
+    image: wand
+back button: True    
+---
+event: aggresive_behaviour_or_attack_note
+question: |
+  <span class="VSSHeading">
+  If you have been the victim of an attack by an animal, seek immediate medical attention 
+  </span>
+buttons:
+  - Continue:
+      code: |
+        aggresive_behaviour_or_attack
+back button: True
+---
+#asking the user to select the category of information they'd like to see
+event: aggresive_behaviour_or_attack
+question: |
+  <span class="VSSHeading">
+  **Information about aggressive behaviour/ animal attacks**
+  </span>
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  Once you can please report the incident to your local council. You will need to provide them with the following: </div>
+  <hr>
+  Information regarding the attack
+  * Date
+  * Time
+  * Exact location
+  * Pictures of the damage caused
+  <hr>  
+  A description of the offending dog
+  * Registration disc
+  * Name tag
+  * Breed
+  * Colour
+  
+  * Sex
+  * Markings
+  <hr>
+  If the owner’s car was involved
+  * Car registration number
+  * Make
+  * Model
+  * Colour
+  <hr>
+  ** The more information you are able to gather the more helpful this will be for the council to investigate.**
+  * If you would like to be redirected to the council’s homepage, please click LGA.;
+  * If you would like to return to the main menu, please click menu.
+buttons:  
+  - LGA: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - MENU: restart
+back button: True  
+---
+#asking the user to select the category of information they'd like to see
+event: defecation
+question: Information about Defecation on premises 
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If the animal is repeatedly defecating on your property, report it to your local council </div>
+  <hr>
+  * If you would like to be redirected to the council’s homepage, please click LGA.
+  
+  * If you would like to return to the main menu, please click menu.
+buttons:  
+  - Menu: restart
+  - LGA: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+back button: True
+---
+#asking the user to select the category of information they'd like to see
+event: wandering
+question: |
+  <span class="VSSHeading">
+  Information about Wandering 
+  </span>
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  An animal is considered ‘wandering at large’ if in a public place, not a park, or a private property without the occupiers consent, or if in a public place with no one exercising effective control either by physical restraint or command </div>
+  <hr>
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If an animal is wondering at large in the neighbourhood, you will need to report it to your council.
+  * If you would like to be redirected to the council’s homepage, please click LGA.
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like more info on the law about dogs and cats, please click INFO.
+  <hr>
+buttons:
+  - LGA: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - MENU: restart
+  - INFO: exit
+    url: https://www.legislation.sa.gov.au/__legislation/lz/c/a/dog%20and%20cat%20management%20act%201995/current/1995.15.auth.pdf
+back button: True
+---
+#this is the page for arson
+---
+#This is the initial page for Arson Completed by Daniel Hill-Brown
+event: DHdisplay_arson_one
+question: Arson
+subquestion: |
+  Arson is when property or motor vehicles are either intentionally or recklessly damaged. It is a serious offence and can be very scary for victims involved.
+  
+  **IT IS A CRIMINAL OFFENCE** You can find out more by clicking more information.
+  
+  IF you have witnessed or experinced arson at a HCSA property, please select CONTINUE.
+  
+buttons:
+  - Continue:
+      code: |
+        DHdisplay_arson_two
+  - More information: exit
+    url: http://classic.austlii.edu.au/au/legis/sa/consol_act/clca1935262/s85.html#:~:text=(b)%20being%20recklessly%20indifferent%20as,Maximum%20penalty%3A%20Imprisonment%20for%20life.
+back button: True
+---
+event: DHdisplay_arson_two
+question: Reporting arson.
+subquestion: |
+ **Arson is a police matter. If you are reporting a current incident, please IMMEDIATELY contact both Police and Fire Fighters on 000.**
+ **If you have been a victim of arson and require support we recommend you contact Lifeline on 13 11 14 for counselling services.**
+ * If you would like to be redirected to Lifeline Website, please click continue.;
+ * If you would like to return to the main menu, please click menu.;
+ 
+ * For further information on Arson from SAPOL, please click more information.
+buttons:
+  - Continue: exit
+    url: https://www.lifeline.org.au/
+  - Menu: DHIssue_menu
+  - Further Information: exit
+    url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
+back button: True    
+---
+event: Drunken_Behaviour_one 
+question: |
+  Drunken behaviour 
+subquestion: |
+  It is not a crime to be drunk, it only becomes illegal if the drunken behaviour is leading to criminal activity of any nature. Refer to our advice on **noise,** or **violence** for more details.
+  <hr>
+  If you suspect any criminal activity, it is a police matter, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:131 444">13 14 44</a>.
+  * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
+  * If you would like to return to the issue menu, please click back
+  
+  * If you would like to return to the Housing Choices SA website, please click HCSA
+buttons:
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+back button: True
+--- 
+event: violence
+mandatory: True
+code: |
+  
+  if (MG_typeofviolence == 'I am a victim of violence'):
+    MGViolence_final_page
+  elif (MG_typeofviolence == 'Someone has threatened me'):
+    MGThreats_final_page
+---
+#This page prompts the user to select either violence or threats of violence
+question: What has happened?
+fields:
+  - no label: MG_typeofviolence
+    input type: radio
+    choices:
+     - "I am a victim of violence"
+     - "Someone has threatened me"
+---
+#endpoint for violence 
+event: MGViolence_final_page
+question: How to deal with violence in your Housing Choices community 
+subquestion: |
+  Violence means any violent conduct. This can be towards property or a person. The conduct does not necessarily have to cause or be intended to have caused injury or damage. It includes any other kind of violent conduct. 
+  
+  An example of violence could be
+  
+  * Throwing an object capable of causing injury at, or towards a person.
+  
+  Other examples are
+  
+  * Choking
+  * Grabbing
+  * Hitting
+  * Kicking
+  * Pinching
+  * Shoving
+  * Slapping
+  * Tripping 
+  
+  <hr/>  
+  
+  **Violence is a police matter and is a criminal offence. If this happens to you, you should contact the police IMMEDIATELY on <a href="tel:131 444">13 14 44</a> , and inform them if you are concerned about your safety.**
+  
+  <hr/>
+  * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
+  
+buttons:
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - HCSA: exit
+    url: https://housingchoices.org.au/
+  - Menu: restart
+--- 
+#threat of violence endpoint
+event: MGThreats_final_page
+question: Dealing with a threat of violence in your Housing Choices Community
+subquestion: |
+  A threat is any communication indicating an intention to cause harm. Threats of         violence can look like different things it can be either direct or indirect
+  
+  * Written
+  
+  * Spoken
+  
+  * By conduct
+  
+  * Partially by words and partially by conduct
+  
+  An example of a threat of violence could be
+  "I want to kill you" this shows and intent cause harm, whereas "I feel like I could     kill you" could be interpreted as an expression of emotions.
+  Other examples could be
+  
+  * I will break your arm
+  
+  * Watch your back
+  
+  * You do not want to mess with me
+  <hr/>  
+  **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on <a href="tel:13 14 44">13 14 44</a> , and inform them if you are concerned about your safety.**
+  <hr/>
+  * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
+  
+buttons:
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - HCSA: exit
+    url: https://housingchoices.org.au/
+  - Menu: restart
+---
+event: hate_crime
+mandatory: True
+code: |
+  
+  if (CA_hate_crime == 'A crime involving violence based on religion'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on race'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on disability'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on ethnicity'):
+    hate_crime_one
+  elif (CA_hate_crime == 'A crime involving violence based on gender'):
+    hate_crime_one
+  elif (CA_hate_crime == 'I do not know but I would like some information on hate crime'):
+    hate_crime_one    
+---
+# defintion of hate crime
+question: |
+  What form of hate crime are you experiencing? 
+fields:
+  - no label: CA_hate_crime  
+    input type: radio
+    choices:
+     - A crime involving violence based on religion 
+     - A crime involving violence based on race 
+     - A crime involving violence based on disability 
+     - A crime involving violence based on ethnicity 
+     - A crime involving violence based on gender
+     - I do not know but I would like some information on hate crime
+--- 
+event: hate_crime_one 
+question: |
+  Hate Crime Information. 
+subquestion: |
+  Hate crime is a criminal offence committed against a person or property that is prompted in whole or in part by an offender's prejudice against a specific group of people. It includes discrimination against:
+  
+  * Sex;
+  * Race;
+  * Age;
+  * Disability;
+  * Ethnicity; and
+  * Religion
+  
+  <hr>
+  **If you have been a victim of hate crime, it is a police matter. If this happens to you, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:13 14 44">13 14 44</a> .**
+  * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
+  * If you would like to return to the main menu, please click menu.
+buttons:
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - MENU: restart  
+back button: True
+--- 
+event: Vandalism
+mandatory: True
+code: |
+  
+  if (CA_Vandalism == 'There is writing on my property'):
+    vandalism_one
+  elif (CA_Vandalism == 'There is drawing on my property'):
+    vandalism_one
+  elif (CA_Vandalism == 'There is damage to my property i.e. etching, scratching'):
+    vandalism_one
+  elif (CA_Vandalism == 'None of the above'):
+    vandalism_one
+--- 
+# defintion of vandalism  
+question: |
+  What form of vandalism are you experiencing? 
+fields:
+  - no label: CA_Vandalism  
+    input type: radio
+    choices:
+     - There is writing on my property 
+     - There is drawing on my property 
+     - There is damage to my property i.e. etching, scratching
+     - None of the above
+
+--- 
+event: vandalism_one 
+question: |
+  Vandalism 
+subquestion: |
+  Vandalism is ‘only illegal if it is done without the owner’s permission’. ‘This would include 
+  * writing, 
+  * drawing, 
+  * marking, 
+  * scratching, 
+  * etching, or 
+  * posting something on someone else’s property without their permission’. 
+  
+  [More info](<https://lsc.sa.gov.au/cb_pages/young_people_and_graffiti.php)
+  <hr>
+  If you have been a victim of vandalism and require support you will need to inform Housing Choices SA on <a href="tel:1300 312 447">1300 312 447</a>  or via email on [infosa@hcsa.org.au](mailto:infosa@hcsa.org.au)
+  * If you would like to be redirected to the Housing Choices South Australia contact page, please click HCSA.
+  * If you would like to return to the main menu, please click menu. 
+buttons:
+  - HCSA: exit
+    url: https://www.housingchoices.org.au/contact-us-1
+  - MENU: restart  
+back button: True
+--- 
+#This is the welcome page for when someone selects DRUG USE/DEALING
+event: MGDisplay_Drugs
+Question: Illicit substances
+Subquestion: |
+  The use of illicit substances or drug dealing is not permitted in HSCA communites.
+  
+  This is illegal activity and must be reported to both HSCA and the police. HCSA properties must *not* be used at any time for the use or trafficking of illicit substances
+buttons:
+  - Continue:
+      code: |
+        MGDruguse_final_page
+  - Exit: exit
+    url: https://www.flinders.edu.au/
+back button: True
+---
+event: MGDruguse_final_page
+question: How to deal with drug use/drug dealing in your neighbourhood
+subquestion: |
+  If someone in your neighbourhood is involved in the use, trafficking or manufacturing   of illicit substances, both housing choices and police should be notified
+  
+  **You can anonymously report the occurence via the Crime Stoppers on 	<a href="1800 333 000">1800 333 000</a> or contact police on <a href="131 444">131 444</a>**
+  
+  Please inform HSCA. This can be done on <a href="1300 312 447">1300 312 447</a>, or via email on [infosa@hcsa.org.au](mailto:infosa@hcsa.org.au). 
+  
+  * Click contact HCSA below to be redirected to Housing Choices contact page.
+  * Click menu to return to the issues menu.
+  
+buttons:
+  - Contact HCSA: exit
+    url: https://www.housingchoices.org.au/contact-us-1
+  - Menu: restart
+---
+#This is the welcome page for when someone selects Hoarding/Squalor
+event: MGDisplay_hoarding_screen
+Question: Hoarding/Squalor
+Subquestion: |
+  A severe domestic squalor can be defined as a household which is filthy, unhygienic, and cluttered full of personal belongings, rubbish and mess. For more information, please click, SA info on squalor.
+  
+  If you are being affected by a member of the Housing Choices community who is living in squalor please click continue.
+buttons:
+  - Continue:
+      code: |
+        MGhoarding_final_page
+  - SA info on squalor: exit
+    url: https://www.sahealth.sa.gov.au/ wps/ wcm/connect/f8561b804fbc211e98559a5cbc1ea1e9/Hoarding+Guideline_FINAL_23_Aug_13.pdf?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE-f8561b804fbc211e98559a5cbc1ea1e9-nKKagdo
+  - Menu: restart 
+---
+event: MGhoarding_final_page
+question: Resolving the issue
+subquestion: |
+  In most cases if you believe that your neighbour is a severe hoarder, please contact SA Health, who can connect you to an Environmental Health Officer (EHO) to address community concerns [here](https://www.eha.sa.gov.au/public-health/hoarding-and-squalor).
+  **If you believe it is an emergency, you need to contact the Police IMMEDIATELY to file a report on <a href="131 444">13 14 44</a>.**
+  <hr>
+  * If you would like to be redirected to the contact information for Environmental Health Officers, please click continue.
+  * If you would like to return to the main menu, please click menu.
+buttons:
+  - Continue: exit
+    url: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/public+health/environmental+health+officers/environmental+health+officers
+  - Menu: restart
+---
+event: MGnoise_welcome_page
+question: Got noisy neighbours?
+subquestion: |
+ ##### These next few questions will take you through some steps in determining whether or not that noise is permitted or a problem.
+  
+  Please note that under the *Local Nuisance and Litter Control Act 2016* (SA) there are reasonable allowances for certain noises. The following questions will help you to determine whether or not you are dealing with an unreasonable local nuisance. If the noise is considered to be a disturbance we will refer you to the appropriate organisation to deal with the issue.
+  
+  Please select continue to begin, or menu to return to the issues menu
+buttons:
+  - Continue:
+      code: |
+        noise_two
+  - Menu: restart
+  - Exit: exit
+    url: https://housingchoices.org.au/
+---
+#This code directs the user to the correct end point
+event: noise_two
+mandatory: True
+code: |
+ 
+  if (MG_typeofnoise == 'Fixed machine'):
+    MGfixed_and_councilendpoint
+  elif (MG_typeofnoise == 'Domestic activity' and MG_timeofnoise == 'Between 8am and 8pm'):
+    MG8am_8pm
+  elif (MG_typeofnoise == 'Domestic activity' and MG_timeofnoise == 'Between 8pm and 8am'):
+    MG8pm_8am
+  elif (MG_typeofnoise == 'Construction noise' and MG_timeofnoise == 'Between 8am and 8pm'):
+    MG8am_8pm
+  elif (MG_typeofnoise == 'Construction noise' and MG_timeofnoise == 'Between 8pm and 8am'):
+    MG8pm_8am
+  elif (MG_typeofnoise == 'Music' and MG_timeofnoise == 'Between 8am and 8pm'):
+    MG8am_8pm
+  elif (MG_typeofnoise == 'Music' and MG_timeofnoise == 'Between 8pm and 8am'):
+    MG8pm_8am
+  elif (MG_typeofnoise == 'Alarm systems'):
+    MGalarm_system
+  elif (MG_typeofnoise == 'Council maintenance'):
+    MGfixed_and_councilendpoint
+  elif (MG_typeofnoise == 'Verbal noise'):
+    MGverbal_vehicles
+  elif (MG_typeofnoise == 'Animals'):
+    MGanimal_noise
+  elif (MG_typeofnoise == 'Vehicles'):
+    MGverbal_vehicles
+  elif (MG_typeofnoise == 'Organisations'):
+    MG_organisation
+---
+question: what time did the noise occur?
+fields:
+  - no label: MG_timeofnoise
+    input type: radio
+    choices:
+     - Between 8am and 8pm
+     - Between 8pm and 8am
+---
+#This page prompts the user
+question: What is the noise?
+fields:
+  - no label: MG_typeofnoise
+    input type: radio
+    choices:
+     - Fixed machine
+     - Domestic activity
+     - Construction noise
+     - Alarm systems
+     - Council maintenance
+     - Music
+     - Verbal noise
+     - Animals
+     - Vehicles
+     - Organisations
+back button: True
+#use the help/hint function to add information about what a noise is https://docassemble.org/docs/fields.html#hint
+---
+#endpoint for fixed machines and council
+event: MGfixed_and_councilendpoint
+question: Information about fixed machine and council maintenance noise 
+subquestion: |
+  ##### Information about fixed machine and council maintenance noise
+  For noise generated by fixed machine and council maintenance to be considered too noisy they need to fit specific criteria, either:
+  
+  * Noise level exceeds 52 dB(A), between 7:00 am and 10:00 pm 
+  or
+  * Noise level continuously exceeds 45dB(A) 10:00 pm and 7:00 am.
+  
+  If you believe that the noise is too loud, you will need to contact your local council, who can then send out an officer to take noise measurements to determine if further action needs to be taken.
+  <hr/>
+  
+  * Click the your local council button below for a directory of local councils.
+  * If you would like to return to the main menu, please click menu.
+  
+buttons:
+  - Your local council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Menu: restart
+  - Exit: exit
+    url: https://housingchoices.org.au/
+---
+#Domestic activity and construction noise between 8pm and 8am
+event: MG8pm_8am
+question: Music, domestic activity and construction noises between 8pm and 8am
+subquestion: |
+  If **Music, domestic activity or construction noise** occur between 8pm and 8am, or between midnight and 9am on Sunday, contact your local council immediately to report the issue. 
+  
+  Click the your local council button below for a directory of local councils.
+  
+  If you would like to return to the main menu, please click menu.
+buttons:
+  - Your local council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Menu: restart
+  - Exit: exit
+    url:  https://housingchoices.org.au/
+  
+---
+#domestic activity between 8am and 8pm
+event: MG8am_8pm
+question: Music, domestic activity and construction noises betwen 8am and 8pm
+subquestion: |
+  Noise from **music** **domestic activity** and **construction** are permitted between 8am and 8pm.
+  
+  If the noise is excessive your first step should be to approach your neighbour to try and resolve the dispute yourself. If you need help mediating the dispute please press the mediation button below to be directed to the united communities mediation services.
+  
+  If you consider the noise to be excessive please contact your local council. Click the your local council button below for a directory of local councils.
+  
+  If you would like to return to the main menu, please click menu.
+buttons:
+  - Mediation: exit
+    url: https://www.unitingcommunities.org/service/legal-services/mediation
+  - Your local council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Menu: restart
+  - Exit: exit
+    url: https://housingchoices.org.au/
+---
+#alarm system endpoint
+event: MGalarm_system
+question: Alarm systems
+subquestion: |
+  #####Information about alarm system noise
+  By law alarm systems can only persist for 5 minutes. If a neighbour's alarm sounds for longer than 5 minutes you will need to contact your neighbour directly.
+  Alternatively, please contact Housing Choices South Australia.
+  
+  * If you would like to be redirected to the Housing Choices South Australia’s contact page, please click continue.
+  
+  * If you would like to return to the main menu, please click menu.
+buttons:
+  - Contact HCSA: exit
+    url: https://www.housingchoices.org.au/contact-us-1
+  - Menu: restart
+  - Exit: exit
+    url: https://www.housingchoices.org.au
+--- 
+event: MGverbal_vehicles
+question: Verbal Noise and Vehicles
+subquestion: |
+  ##### Information about verbal and vehicle noise
+  For noise generated, verbally or by vehicles to be considered too noisy they need to fit specific criteria:
+  
+  **If vehicle or verbal noise is persistent and ongoing, it becomes a police matter. If this happens to you, you need to contact the Police IMMEDIATELY to file a report on 13 14 44.**
+  
+  * If you would like to be redirected to SA Police’s homepage, please click police
+  * If you would like to return to the main menu, please click menu
+  * If vehicle or verbal noise is persistant and ongoing please report the matter to the police on <a href="tel:131 444">13 14 44</a> .
+buttons:
+  - Police: exit
+    url: https://www.police.sa.gov.au/
+  - Menu: restart
+  - exit: exit
+    url: https://www.housingchoices.org.au/
+---
+event: MGanimal_noise
+question: Animal Noises
+subquestion: |
+ ##### Information about animal noise
+  For authorities to act upon noise generated by animals it must fit specific criteria. The noise needs to reach a degree or extent that it unreasonably interferes with the peace, comfort, or convenience of a person.
+  <hr>
+  If you believe this noise to be excessive, we recommend you fist try to contact your neighbour to come to an agreement. If this fails, then you can keep record of animal noises through a diary, if the noise is persistent, you can submit this to your local council for investigation.
+  <hr>
+  * If you would like to consider council control orders, press restart to return to the issues menu and select ‘pets.’
+  * If you consider the noise to be excessive please contact your local council. Click the your local council button below for a directory of local councils.
+  * If you would like to return to the main menu, please click menu.
+  
+buttons:
+  - Your local council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Menu: restart
+  - Exit: exit
+    url:  https://housingchoices.org.au/
+---
+event: MG_organisation
+question: Noise from organisations
+subquestion: |
+  For noise generated, by an organisation such as a sporting club, a community meeting, church, or a business, all issues must be raised directly with the organisation.
+  
+  If you would like to return to the main menu, please click restart.
+buttons:
+  - Menu: restart
+  - Exit: exit
+    url: https://www.housingchoices.org.au/
+---
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib-site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: right">
+    <cite><small><i>
+    Developed by Flinders University in collaboration with Housing Choices SA
+    </i></small></cite>
+    </div>
+    </div>
+---
