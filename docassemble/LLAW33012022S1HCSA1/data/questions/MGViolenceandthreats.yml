@@ -7,10 +7,9 @@ code: |
     MGViolence_final_page
   elif (MG_typeofviolence == 'Someone has threatened me'):
     MGThreats_final_page
-
 ---
 #This page prompts the user to select either violence or threats of violence
-question: What is happening?
+question: What has happened?
 fields:
   - no label: MG_typeofviolence
     input type: radio
@@ -22,21 +21,77 @@ fields:
 event: MGViolence_final_page
 question: How to deal with violence in your Housing Choices community 
 subquestion: |
-  Blah blah blah violence
+  Violence means any violent conduct. This can be towards property or a person. The conduct does not necessarily have to cause or be intended to have caused injury or damage. It includes any other kind of violent conduct. 
+  
+  An example of violence could be
+  
+  * Throwing an object capable of causing injury at, or towards a person.
+  
+  Other examples are
+  
+  * Choking
+  * Grabbing
+  * Hitting
+  * Kicking
+  * Pinching
+  * Shoving
+  * Slapping
+  * Tripping 
+  
+  <hr/>  
+  
+  **Violence is a police matter and is a criminal offence. If this happens to you, you should contact the police IMMEDIATELY on <a href="tel:131 444">13 14 44</a> , and inform them if you are concerned about your safety.**
+  
+  <hr/>
+  * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
+  
 buttons:
-  - Continue: continue
-  - Exit: exit
-    url: https://www.flinders.edu.au/
-  - Restart: restart
----
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - HCSA: exit
+    url: https://housingchoices.org.au/
+  - Menu: restart
+--- 
 #threat of violence endpoint
 event: MGThreats_final_page
 question: Dealing with a threat of violence in your Housing Choices Community
 subquestion: |
-  blah blah blah
+  A threat is any communication indicating an intention to cause harm. Threats of         violence can look like different things it can be either direct or indirect
+  
+  * Written
+  
+  * Spoken
+  
+  * By conduct
+  
+  * Partially by words and partially by conduct
+  
+  An example of a threat of violence could be
+  "I want to kill you" this shows and intent cause harm, whereas "I feel like I could     kill you" could be interpreted as an expression of emotions.
+  Other examples could be
+  
+  * I will break your arm
+  
+  * Watch your back
+  
+  * You do not want to mess with me
+  <hr/>  
+  **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on <a href="tel:13 14 44">13 14 44</a> , and inform them if you are concerned about your safety.**
+  <hr/>
+  * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
   
 buttons:
-  - Continue: continue
-  - Exit: exit
-    url: https://www.flinders.edu.au/
-  - Restart: restart
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - HCSA: exit
+    url: https://housingchoices.org.au/
+  - Menu: restart
+--- 
