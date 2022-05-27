@@ -11,11 +11,11 @@ code: |
 ---
 #This is the welcome page for when someone selects DRUG USE/DEALING
 event: MGDisplay_welcome_screen
-Question: Illicit substances
+Question: Drug use and drug dealing
 Subquestion: |
-  The use of illicit substances or drug dealing is not permitted in HSCA communites.
+  Drug use and drug dealing are not permitted in Housing Choices communities
   
-  This is illegal activity and must be reported to both HSCA and the police. HCSA properties must *not* be used at any time for the use or trafficking of illicit substances
+  This is illegal activity and should be reported to both HSCA and the police. HCSA properties must **not** be used at any time for the use or trafficking of illicit substances. Please click continue for more information.
 buttons:
   - Continue:
       code: |
@@ -27,18 +27,16 @@ back button: True
 event: MGDruguse_final_page
 question: How to deal with drug use/drug dealing in your neighbourhood
 subquestion: |
-  If someone in your neighbourhood is involved in the use, trafficking or manufacturing   of illicit substances, both housing choices and police should be notified
+  If someone in your neighbourhood is involved in the use, trafficking or manufacturing   of illicit substances, both Housing Choices and the police should be notified
   
   **You can anonymously report the occurence via the Crime Stoppers on 	<a href="1800 333 000">1800 333 000</a> or contact police on <a href="131 444">131 444</a>**
   
   Please inform HSCA. This can be done on <a href="1300 312 447">1300 312 447</a>, or via email on [infosa@hcsa.org.au](mailto:infosa@hcsa.org.au). 
   
-  * Click contact HCSA below to be redirected to Housing Choices contact page.
-  * Click menu to return to the issues menu.
+  Click contact HCSA below to be redirected to Housing Choices contact page, or click menu to select a new issue.
   
 buttons:
   - Contact HCSA: exit
     url: https://www.housingchoices.org.au/contact-us-1
   - Menu: restart
 ---
-
