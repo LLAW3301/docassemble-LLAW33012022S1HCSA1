@@ -1,0 +1,26 @@
+--- 
+# defintion of homelessness
+mandatory: True 
+question: |
+  Do you believe that you are experiencing a significant build up of litter or are victim to illegal dumping? 
+  
+  
+subquestion: |
+  If you suspect another person of having disposed of litter without the consent of the owner or occupier, you should notify the relevant council. 
+  
+  You can lodge a complaint with your local council who can impose penalties if found that they were littering or illegally dumping.
+  
+  To be redirected to your local council's website please click Your Local Council.  
+buttons:
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing 
+back button: True
+---
+features:
+  navigation back button: True
+  navigation: True 
+---
+mandatory: True
+question: |
+  If you would like to return to the main menu, please click menu. 
+---
