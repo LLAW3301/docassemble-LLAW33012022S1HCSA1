@@ -1,0 +1,283 @@
+# This is the main file for the Disability Discrimination Report Form.  It drives the logic flow.
+---
+# Metadata about the app
+metadata:
+  title: |
+    Ensuring Equality: Disability Discrimination Report Form
+  short title: |
+    Disability Discrimination Report Form
+  authors:
+    - name: Julia Weltner
+    - name: Casey Moffatt
+    - name: Lucy Schapel
+    - name: Nakisa Hashemi
+  organisation:  Flinders University
+  revision_date: 2020-06-3
+---
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex- direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib- site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: center"> <cite><small><i>
+    Developed by Flinders University in collaboration with Equality Lawyers </i></small></cite>
+    </div>
+    </div>
+---
+features:
+  css: prototype.css
+  debug: True
+  hide standard menu: False
+  navigation: True
+---
+objects:
+  - JIWlogo: DAStaticFile.using(filename='EQL.logo.png')
+---
+mandatory: True
+code: |
+  set_parts(logo='<img src="' + JIWlogo.url_for() + '" style="height: 50px;">')
+---
+objects:
+  - endpoint: DADict
+---
+include:
+  - EQLwelcome_and_disclaimer.yml
+  - EQLreview_info_note.yml
+  - EQLchooses_myself_personal_info.yml
+  - EQLchooses_someone_else_personal_info.yml
+  - EQLincident_questions.yml
+  - EQLdesired_outcome_questions.yml
+  - EQLsend_email.yml
+---
+sections:
+  - Welcome: Welcome
+  - Disclaimer: Disclaimer
+  - Personal Information: Personal Information
+  - Incident Information: Incident Information
+  - Outcome: Outcome
+  - Summary: Summary 
+---
+event: Personal Information
+section: Personal Information
+question: |
+  Review Personal Information Answers
+review:
+  - Edit answer: EQLperson_filling_in_form
+    button: |
+      Are you filling in this form for yourself or someone else? **${ EQLperson_filling_in_form }**
+  - Edit answer: EQLfirstname1
+    button: |
+      Name: **${ EQLfirstname1 }** **${ EQLlastname1 }**
+  - Edit answer: EQLemail1
+    button: |
+      Email: **${ EQLemail1 }**
+  - Edit answer: EQLphone1
+    button: |
+      Phone Number: **${ EQLphone1 }**
+  - Edit answer: EQLaddress1
+    button: |
+      Residential Address: **${ EQLaddress1 }**
+  - Edit answer: EQLdis1
+    button: |
+      Your situation: **${ EQLdis1 }**
+  - Edit answer: EQLdis_type1
+    button: |
+      Disability type: **${ EQLdis_type1 }**
+  - Edit answer: EQLexplain_future1
+    button: |
+      What disability may you develop in the future? **${ EQLexplain_future1 }**
+  - Edit answer: EQLexplain_ppl_thk1
+    button: |
+      What disability do people think you have? **${ EQLexplain_ppl_thk1 }**
+  - Edit answer: EQLrelationship1
+    button: |
+      Have you been treated differently because of your relationshiip with a disabled person? **${ EQLrelationship1 }**      
+  - Edit answer: EQLrelationship_with1
+    button: |
+      What is your relationshiip with the disabled person? **${ EQLrelationship_with1 }**       
+  - Edit answer: EQLfor_me1
+    button: |
+      Why do you believe this form applies to you? **${ EQLfor_me1 }**   
+  - Edit answer: EQLrelation_to
+    button: |
+      What is your relatioinship with the affected person? **${ EQLrelation_to }**   
+  - Edit answer: EQLfirstname2
+    button: |
+      Name: **${ EQLfirstname2 }** **${ EQLlastname2 }**
+  - Edit answer: EQLemail2
+    button: |
+      Email: **${ EQLemail2 }**
+  - Edit answer: EQLphone2
+    button: |
+      Phone Number: **${ EQLphone2 }**
+  - Edit answer: EQLaddress2
+    button: |
+      Residential Address: **${ EQLaddress2 }**
+  - Edit answer: EQLrelation_to_dis
+    button: |
+      Do you have a disability? **${ EQLrelation_to_dis }**
+  - Edit answer: EQLfirstname3
+    button: |
+      Name of the affected person: **${ EQLfirstname3 }** **${ EQLlastname3 }**  
+  - Edit answer: EQLemail3
+    button: |
+      Email: **${ EQLemail3 }**
+  - Edit answer: EQLphone3
+    button: |
+      Phone Number: **${ EQLphone3 }**
+  - Edit answer: EQLaddress3
+    button: |
+      Residential Address: **${ EQLaddress3 }** 
+  - Edit answer: EQLdis3
+    button: |
+      Situation of affected person: **${ EQLdis3 }**       
+  - Edit answer: EQLdis_type3
+    button: |
+      Disability Type: **${ EQLdis_type3 }**       
+  - Edit answer: EQLexplain_future3
+    button: |
+      What disability may the affected person develop in the future? **${ EQLexplain_future3 }**        
+  - Edit answer: EQLexplain_ppl_thk3
+    button: |
+      What disability do people think the affected person has? **${ EQLexplain_ppl_thk3 }**    
+  - Edit answer: EQLrelationship3
+    button: |
+      Have they been treated differently because of their rerlatioinship with a disabled person? **${ EQLrelationship3 }**         
+  - Edit answer: EQLrelationship_with3
+    button: |
+      What is their relationship with the disabled person? **${ EQLrelationship_with3 }** 
+  - Edit answer: EQLfor_me3
+    button: |
+      Why do you believe this form applies to you? **${ EQLfor_me3 }** 
+---
+event: Incident Information
+section: Incident Information
+question: |
+  Review Incident Information Answers
+review:
+  - Edit answer: EQLdate
+    button: |
+      Date of incident **${ EQLdate }** 
+  - Edit answer: EQLwhere
+    button: |
+      Location of incident: **${ EQLwhere }** 
+  - Edit answer: EQLanimal
+    button: |
+      Was an assistance animal involved? **${ EQLanimal }** **${ EQLdo_they_apply }** 
+  - Edit answer: EQLwhowhat
+    button: |
+      What happened and who was involved? **${ EQLwhowhat }** 
+  - Edit answer: EQLimpact
+    button: |
+      How have you been affected? **${ EQLimpact }** 
+  - Edit answer: EQLevidence
+    button: |
+      Do you have any evidence? **${ EQLevidence }** 
+  - Edit answer: EQLpast_complaint
+    button: |
+      Have you made a complaint about this in the past? **${ EQLpast_complaint }** 
+  - Edit answer: EQLpast_complaint2who
+    button: |
+      Who was the complaint made to? **${ EQLpast_complaint2who }** 
+  - Edit answer: EQLpast_complaint_outcome
+    button: |
+      Outcome of previous complaint: **${ EQLpast_complaint_outcome }** 
+---
+event: Outcome
+section: Outcome
+question: |
+  Review Outcome Answers
+review:
+  - Edit answer: EQLoutcome
+    button: |
+      What would you like to see happen once filling out this form? **${ EQLoutcome }**
+  - Edit answer: EQLoutcome_complaint
+    button: |
+      What would you like to see happen once making a formal complaint? **${ EQLoutcome_complaint }**
+  - Edit answer: submit_to_authority
+    button: |
+      Would you like your answers sent to Equality Lawyers? **${ submit_to_authority }**
+  - Edit answer: EQLcontact_me
+    button: |
+      Preferred method of contact: **${ EQLcontact_me }**
+  - Edit answer: EQLday2contact
+    button: |
+      Best time to be contacted: **${ EQLday2contact }** **${ EQLcontact_time }**
+---
+# Collects personal and disability information
+question: |
+  Are you fillng out this form for yourself or on the behalf of someone else?
+fields:
+  - no label: EQLperson_filling_in_form
+    datatype: radio
+    choices:
+    - Myself
+    - Someone else
+section: Personal Information
+---
+# Code for all of the personal and disability information pathways
+mandatory: true
+code: |
+  if EQLperson_filling_in_form == 'Myself':
+    EQLfirstname1
+    EQLemail1
+    EQLdis1
+    if EQLdis1 == 'I have a disability' or EQLdis1 == 'I had a disability in the past':
+        EQLdis_type1
+    elif EQLdis1 == 'I may develop a disability in the future':
+      EQLexplain_future1
+    elif EQLdis1 == 'People think I have a disability':
+      EQLexplain_ppl_thk1
+    else:
+      if EQLrelationship1 == 'Yes':
+        EQLrelationship_with1 
+      else:
+        EQLfor_me1
+  else:
+    EQLrelation_to
+    EQLfirstname2
+    EQLlastname2
+    EQLemail2
+    EQLrelation_to_dis
+    EQLfirstname3
+    EQLemail3
+    EQLdis3
+    if ( EQLdis3 == 'They have a disability' ) or ( EQLdis3 == 'They had a disability in the past' ):
+      EQLdis_type3
+    elif EQLdis3 == 'They may develop a disability in the future':
+      EQLexplain_future3
+    elif EQLdis3 == 'People think they have a disability':
+      EQLexplain_ppl_thk3
+    else:
+      if EQLrelationship3 == 'Yes':
+        EQLrelationship_with3
+      else:
+        EQLfor_me3
+---
+# Collects information about the incident
+mandatory: True
+code: |
+  EQLdate
+  EQLwhere
+  EQLwhowhat
+  EQLanimal
+  if EQLanimal == 'Yes':
+    EQLdo_they_apply
+---
+# Collects information about the desired outcome
+mandatory: True
+code: | 
+  EQLoutcome
+  if EQLoutcome == 'I would like to make a formal complaint':
+    EQLoutcome_complaint
+---
+# Sends user to sending page and the final screen
+mandatory: true
+code: |
+  if submit_to_authority == 'Yes':
+    email_sent_ok
+    EQLcontact_me
+    email_sent
+  if submit_to_authority == 'No':
+    email_not_sent
+---
