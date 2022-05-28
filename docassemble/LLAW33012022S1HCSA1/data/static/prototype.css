@@ -1,0 +1,160 @@
+.navbar{
+    background-color: rgb(0,47,69) !important;
+}
+
+/* This sets the colour of the 'Source' link in the navbar */
+.navbar .nav-item a{
+    color: rgb(0,47,69) !important;
+}
+
+.navbar .dropdown-menu{
+    */
+    background-color: rgba(137,169,217,0.5);
+}
+/* Sets properties for when hovering over a menu item in the 
+   drop-down menu */
+.dropdown-item:hover{
+    background-color: rgba(137,169,217,0.5);
+}
+
+/* Sets the appearence for the 'Continue' button... */
+.btn-primary{
+  color: rgb(13,84,117);
+  background-color: rgba(137,169,217,0.25);
+  border-color: rgba(137,169,217,0.25);
+}
+/* ...and when hovering over it */
+.btn-primary:hover{
+  color: rgb(13,84,117);
+  background-color: rgba(255,255,255);
+  border-color: rgba(137,169,217,0.25);
+}
+
+/* Sets the appearnce for the 'Restart' button... */
+.btn-secondary{
+  color: rgba(137,169,217, 0.75);
+  background-color: rgba(26,43,76);
+  border-color: rgba(26,43,76);
+}
+/* ...and when hovering over it */
+.btn-secondary:hover{
+  color: rgb(26,43,76);
+  background-color: rgba(255,255,255);
+  border-color: rgba(26,43,76,0.25);
+}
+
+/* Sets the appearnce for the 'Restart' button... */
+.btn-warning{
+  color: rgba(137,169,217, 0.75);
+  background-color: rgba(26,43,76);
+  border-color: rgba(26,43,76);
+}
+/* ...and when hovering over it */
+.btn-warning:hover{
+  color: rgb(26,43,76);
+  background-color: rgba(255,255,255);
+  border-color: rgba(26,43,76,0.25);
+}
+
+/* Sets the appearence for the 'Exit' button... */
+.btn-danger{
+  color: rgba(137,169,217, 0.75);
+  background-color: rgba(26,43,76);
+  border-color: rgba(26,43,76);
+}
+
+/* ...and when hovering over it */
+.btn-danger:hover{
+  color: rgb(26,43,76);
+  background-color: rgba(255,255,255);
+  border-color: rgba(26,43,76,0.25);
+}
+
+/* Sets the appearence for the navigation bar... */
+.nav-link{
+  color: rgb(26,43,76);
+  background-color: rgba(255,255,255);
+  border-color: rgba(26,43,76,0.25);
+}
+
+/* ...and when hovering over it */
+.nav-link:hover{
+  color: rgba(26,43,76);
+  background-color: rgba(137,169,217, 0.25);
+  border-color: rgba(26,43,76);
+}
+
+/* ... and when active state */
+.daclickable.nav-link.danavlink.active{
+  color: rgba(255,255,255);
+  background-color: rgba(26,43,76);
+  border-color: rgba(137,169,217, 0.25);  
+}
+
+/* ... and when active state */
+.nav-link.danavlink.active{
+  color: rgba(255,255,255);
+  background-color: rgba(26,43,76);
+  border-color: rgba(137,169,217, 0.25);  
+}
+
+/* ... and when active state for 'Summary' */
+.nav-link.danavlink.active.thelast{
+  color: rgba(255,255,255);
+  background-color: rgba(26,43,76);
+  border-color: rgba(137,169,217, 0.25);  
+}
+
+/* Sets the appearence for the 'edit answers' button... */
+.da-review-action-button{
+  color: rgb(255,255,255);
+  background-color: rgba(26,43,76);
+  border-color: rgba(26,43,76);
+  text-decoration: none
+}
+
+/* ... and when hovering over it */
+.da-review-action-button:hover{
+  color: rgb(26,43,76);
+  background-color: rgba(255,255,255);
+  border-color: rgba(26,43,76);
+  text-decoration: none
+}
+
+/* Sets the appearence for the source link... */
+a{
+  color: rgb(137,169,217);
+}
+
+/* ... and when hovering */
+a:hover{
+  color: rgb(26,43,76);
+  text-decoration: underline
+}
+
+/* Sets appearance for '*' */
+.col.dawidecol.dafieldpart::before {
+  color: rgb(26,43,76);
+}
+/* Sets appearance for '*' */
+.form-group.darequired .da-form-label:after {
+  color: rgb(26,43,76);
+}
+
+/* Sets appearance for document creation pop up */
+.alert {
+  color: rgba(26,43,76);
+  background-color: rgba(255,255,255);
+  border-color: rgba(26,43,76);  
+}
+  
+html {
+  color: rgb(26,43,76);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+  color: rgb(26,43,76);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
