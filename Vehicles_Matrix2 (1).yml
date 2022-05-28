@@ -1,0 +1,45 @@
+# this code facilitates the vehicles issue screens. Users will be directed to this after
+# selecting 'vehicles' from the issues menu screen. 
+---
+# This is the code block. From these ELIF statements it will direct the user to the
+# appropriate screen based on the user's responses on the selection screen. 
+mandatory: true
+code: |
+  if (CGBVehicle_issue == 'Vehicle Hooning'):
+    Vehicle_Hooning
+  elif (CGBVehicle_issue == 'Parking Dispute'):
+     Vehicle_Parking
+  elif (CGBVehicle-issue == 'Abandoned Vehicle'):
+      Vehicle-Abandoned
+---
+mandatory: true
+question: Which vehicle-related activity do you want assistance with?
+fields:
+  - no label: CGBVehicle_issue
+    input type: radio
+    choices:
+      - Vehicle Hooning
+      - Parking Dispute
+      - Abandoned Vehicle
+---
+event: Vehicle_Hooning
+question: If there is dangerous driving or *hooning* in your area, please BLANK
+buttons: 
+  - Exit: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: true
+---
+event: Vehicle_Parking
+question: If you are having a parking dispute please BLANK
+buttons:
+  - Exit: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back buttons: true
+---
+event: Vehicle_Abandoned
+question: If there is a abandoned vehicle in your area, please BLANK
+buttons:
+  - exit: exit
+    url: https://housingchoices.org.au/residents/south-australia
+back button: true
+---
