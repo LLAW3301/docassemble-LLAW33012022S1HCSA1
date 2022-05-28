@@ -1,4 +1,20 @@
 ---
+features:
+  css: prototype.css
+  debug: True
+  hide standard menu: False
+  navigation: True
+---
+objects:
+  - BTlogo: DAStaticFile.using(filename='HCSA.Logo.Full.Colour.png')
+---
+mandatory: True
+code: |
+  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 70px; alt=''">')
+---
+objects:
+  - endpoint: DADict
+---
 mandatory: true
 question: Welcome to *Better Tenant*
 subquestion: | 
