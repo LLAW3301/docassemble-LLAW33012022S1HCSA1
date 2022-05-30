@@ -1,0 +1,72 @@
+---
+mandatory: True
+code: |
+  MGSexualoffences
+  
+  MGSexlaw
+---
+code: |
+  MGSexualoffences = True
+---
+event: MGSexualoffences
+question: Information about sexual offences.
+subquestion: |
+
+  **Sexual offences include any sort of sexual activity which occurs without mutual consent, this can occur when forced, threatened or coerced into doing something sexual.**
+  <hr/> 
+  If you are a victim, we recommend that you:
+  
+  1. Make sure that you are safe
+  
+  2. Talk to someone you trust
+  
+  3. Talk to a support service
+  
+  4. Contact the police
+  <hr/>
+  **If you are need support please contact 1800 RESPECT on <a href="tel:1800 737 732">1800 737 732</a>.**
+  
+  1800 RESPECT is a confidential, 24-hour helpline for people who have experienced sexual assault. They have trained professionals who can talk to you about how you are feeling, and help you work out what you want to do next. You can also use their website to find a support service near you, or to chat to a support person online. 
+  <hr/>
+  * Click on continue for more information.
+
+  * Click Online Support to be redirected to the 1800Respect online support service.
+  
+  * Click Services Near Me to find support services near you
+  
+  * Click on menu to select another issue.
+
+  
+buttons:
+  - Continue: continue
+  - Online Support: exit
+    url: https://chat.1800respect.org.au/#/welcome
+  - Services Near Me: exit
+    url: https://www.1800respect.org.au/services
+  - Menu: restart
+back button: true
+---
+event: MGSexlaw
+question: What to do if you are sexually assaulted.
+subquestion: |
+
+  **Sexual offences are a police matter. If you are the victim of a sexual offence contact the police immediately on <a href="tel:131 444">13 14 44</a>.**
+  <hr/>
+  It is very important for a victim of rape or sexual assault to be medically examined as soon as possible after the assault for the following reasons:
+
+  1.  To determine if there has been any injury, especially internal, that may not be readily apparent
+
+  2. To test for a sexually transmitted disease and/or unwanted pregnancy
+
+  3. To collect medical evidence for possible prosecution.
+  <hr/>
+  
+buttons:
+  - SA Police <br/> contact information: exit
+    url: https://www.police.sa.gov.au/
+  - Menu: restart
+  - exit: exit
+    url: https://housingchoices.org.au/
+back button: true
+---
+  

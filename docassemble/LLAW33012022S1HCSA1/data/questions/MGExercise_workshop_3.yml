@@ -1,0 +1,163 @@
+---
+Variable name: MGPatients
+use object: true
+data:
+  - name: Rand Al Thor
+    age: 35
+    consented: true
+  - name: Egweyne Al Vere
+    age: 62
+    consented: True
+  - name: Perrin Abara
+    age: 27
+    consented: False
+  - name: Matt Cauthon
+    age: 52
+    consented: True
+  - name: Elaine Domodred
+    age: 72
+    consented: true
+  - name: Mazrim Tyme
+    age: 52
+    consented: true
+  - name: Padan Fegn
+    age: 36
+    consented: false
+  - name: Baalzamom
+    age: 52
+    consented: true
+---
+mandatory: true
+question: Welcome
+subquestion: |
+
+  Welcome to the COVID-19 vaccine eligibility application.
+  
+  This app asks you some questions about a patient and whether they are willing to conset to the vaxzevria vaccine. This app asks for the name of the patient, and their age.
+  
+  This app then asks if they have been consulted on the risks of the Vaxevria. If they have not , the app will exit. If they have the app will ask if they consent to the Vaxzevria vaccine. If the patient is over 60, they are getting the Vaxzevria, regardless of whether they consent or not.
+  
+  This app then prints out the patient's response, along with the responses of a number of existing patients.
+  
+  **disclaimer:** This app does not offer legal and/or medical advice
+under: |
+  *Rogers v Whitaker* (1992) 175 CLR 479
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.covid-19.sa.gov.au/vaccination
+  
+#the idea here is that we want to implement informed consent laws into the document
+---
+mandatory: true
+code: |
+  if MGage >= 60:
+    MGDisplayFinalScreen
+  else: 
+    if MGconsulted:
+      MGDisplayFinalScreen
+    else:
+      MGNotConsultedScreen
+---
+question: Please enter the age of the patient
+fields:
+  - no label: MGage
+    datatype: integer
+---
+question: Please enter the name of the patient
+fields:
+  - no label: MGname
+---
+question: Has the patient been consulted on the risks of Vaxzeriva for their age group?
+yesno: MGconsulted
+---
+Question: Does the patient consent to receiving the Vaxzeriva?
+yesno: MGConsented
+---
+question: What report do you want?
+fields:
+  - no label: MGVaccineReport
+    datatype: radio
+    choices:
+      - Only under 60s who have consented to Vaxzeriva: under60sconsented
+      - Only under 60s who have not consented to Vaxzeriva: under60noconsent
+      - Everyone who is having Vaxzeriva: everyoneVax
+      - Nobody: nobody
+---
+event: MGDisplayFinalScreen
+question: Final Patient Screen
+subquestion: |
+  %if MGage >=60:
+  Patient ${MGname}'s age is ${MGage}, and is getting Vaxzeriva
+  %else:
+  Patient ${MGname}'s age is ${MGage}, and
+  %if MGConsented:
+  has **consented**
+  %else:
+  has **not consented**
+  %endif:
+  to Vaxzeriva
+  %endif
+  
+  # VACCINE REPORT
+  %if MGVaccineReport == 'nobody':
+  You elected not to display vaccine report
+  %else:
+  %if MGVaccineReport == 'Under60Consented':
+  You elected to display all patients under 60 who consented to Vaxzevria
+  %elif MGVaccineReport == 'Under60NoConsent':
+  You elected to display all patients under 60 who did not consent to Vaxzevria
+  %elif MGVaccineReport == 'EveryoneVax':
+  You elected to display all patients who are getting Vaxzevria
+  %endif
+  ${MGVaccineReportTable}
+  %endif
+---
+event: MGNotConsultedScreen
+question: Patient was not consulted
+subquestion: |
+  
+  The patient was not consulted
+  
+  Therefore, they cannot continue
+Buttons:
+  - Continue: continue
+  - Exit: exit
+    url: https://www.covid-19.sa.gov.au/vaccination
+---
+table: MGVaccineReportTable
+rows: MGPatientsForReport
+Columns:
+  - Name: |
+      row_item['name']
+  - Age: |
+      row_item['age']
+  - Consented: |
+      row_item['consented']
+---
+code: |
+  MGPatientsForReport = []
+  for MGPatient in MGPatients:
+    if MGPatient['age'] >= 60:
+      MGVaccineText = "Getting Vaxzervia"
+    else:
+      if MGPatient['consented']:
+        MGVaccineText = "Has consented to Vaxzervia"
+      else:
+        MGVaccineText = "Has not consented to Vaxzervia"
+
+    MGTempPatient = {
+      'name': MGPatient['name'],
+      'age': MGPatient['age'],
+      'consented': MGVaccineText
+    }
+    
+    if MGVaccineReport == 'under60Consulted' and MGPatient['consented'] and MGPatient['age'] < 60:
+      MGPatientsForReport.append(MGTempPatient)
+    elif MGVaccineReport == 'under60NoConsent' and not MGPatient['consented'] and MGPatient['age'] < 60:
+      MGPatientsForReport.append(MGTempPatient)
+    elif MGVaccineReport == 'everyoneVax' and (MGPatient['consented'] or MGPatient['age'] >= 60):
+      MGPatientsForReport.append(MGTempPatient)
+    else:
+      pass
+---

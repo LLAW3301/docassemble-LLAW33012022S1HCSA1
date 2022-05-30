@@ -1,0 +1,57 @@
+---
+mandatory: True
+code: |
+  MGtheftwelcome
+  
+  MGtheftfinalpage
+---
+code: |
+  MGtheftwelcome = True
+---
+event: MGtheftwelcome
+question: Has someone taken your property?
+subquestion: |
+
+  **This guide will explain the laws around theft in South Australia, and what you can do when your property has been taken**
+  <hr/>
+  Under the *Criminal Law Consolidation Act* (SA) 1935 a person is guilty of theft if they deal with your property
+  
+  1. Dishonstly; and
+  
+  2. Without your consent; and
+  
+  3. They intend to: deprive you permanently of the property; OR make a serious encroachment on your proprietary rights 
+  
+  A person intends to make a serious encroachment if the person intends
+  
+  1. To treat the property as his or her own to dispose of regardless of the owner's rights; or
+  
+  2. To deal with the property in a way that creates a substantial risk that: you will not get the property back; OR that when the owner gets it back, its value will be substantially impaired.
+  <hr/>
+  
+  If someone has taken your property please click continue for more information
+  
+  Press menu to return to select another issue.
+buttons:
+  - continue: continue
+  - exit: exit
+---
+event: MGtheftfinalpage
+question: Information about theft
+subquestion: |
+
+  **Theft is a police matter and is a criminal offence. If this happens to you, you should report the matter to police IMMEDIATELY on** <a href="tel:131 444">13 14 44</a>.
+  <hr/>
+   * Click SAPOL to be redirected to the SA Police website.
+  
+  * If you would like to return to the main menu, please click menu.
+  
+  * If you would like to visit Housing Choices SA, please click HCSA.
+  
+buttons:
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - Menu: restart
+  - HCSA: exit
+    url: https://housingchoices.org.au/
+---
