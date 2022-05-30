@@ -1,0 +1,35 @@
+#this is the page for hoarding and squalor
+---
+mandatory: True
+code: |
+  MGDisplay_hoarding_screen
+  
+  MGhoarding_final_page
+---
+#This is the welcome page for when someone selects Hoarding/Squalor
+event: MGDisplay_hoarding_screen
+Question: Hoarding/Squalor
+Subquestion: |
+  A severe domestic squalor can be defined as a household which is filthy, unhygienic, and cluttered full of personal belongings, rubbish and mess. For more information, please click, SA info on squalor.
+  
+  If you are being affected by a member of the Housing Choices community who is living in squalor please click continue.
+buttons:
+  - Continue:
+      code: |
+        MGhoarding_final_page
+  - SA info on squalor: exit
+    url: https://www.sahealth.sa.gov.au/ wps/ wcm/connect/f8561b804fbc211e98559a5cbc1ea1e9/Hoarding+Guideline_FINAL_23_Aug_13.pdf?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE-f8561b804fbc211e98559a5cbc1ea1e9-nKKagdo
+  - Menu: restart 
+---
+event: MGhoarding_final_page
+question: Resolving the issue
+subquestion: |
+  In most cases if you believe that your neighbour is a severe hoarder, please contact SA Health, who can connect you to an Environmental Health Officer (EHO) to address community concerns [here](https://www.eha.sa.gov.au/public-health/hoarding-and-squalor).
+  **If you believe it is an emergency, you need to contact the Police IMMEDIATELY to file a report on <a href="131 444">13 14 44</a>.**
+  <hr>
+   If you would like to be redirected to the contact information for Environmental Health Officers, please click continue, or to select a new issue click menu.
+buttons:
+  - Environmental health officer <br/> contact info: exit
+    url: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/public+health/environmental+health+officers/environmental+health+officers
+  - Menu: restart
+---
