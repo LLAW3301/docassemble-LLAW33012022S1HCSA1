@@ -8,14 +8,13 @@ subquestion: |
   If you suspect any criminal activity, it is a police matter, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:131 444">13 14 44</a>.
   
   * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
-  * If you would like to return to the issue menu, please click back
-  
-  * If you would like to return to the Housing Choices SA website, please click HCSA
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
 buttons:
-  - HCSA: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
+  - Exit:
+      code: |
+        Final_Screen  
 back button: True
 --- 
 event: violence
@@ -35,6 +34,7 @@ fields:
     choices:
      - "I am a victim of violence"
      - "Someone has threatened me"
+back button: True
 ---
 #endpoint for violence 
 event: MGViolence_final_page
@@ -64,16 +64,15 @@ subquestion: |
   <hr/>
   * Click SAPOL to be redirected to the SA Police website.
   
-  * If you would like to return to the main menu, please click menu.
-  
-  * If you would like to visit Housing Choices SA, please click HCSA.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
   
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
-  - HCSA: exit
-    url: https://housingchoices.org.au/
-  - Menu: restart
+  - Exit:
+      code: |
+        Final_Screen
+back button: True
 --- 
 #threat of violence endpoint
 event: MGThreats_final_page
@@ -103,16 +102,15 @@ subquestion: |
   <hr/>
   * Click SAPOL to be redirected to the SA Police website.
   
-  * If you would like to return to the main menu, please click menu.
-  
-  * If you would like to visit Housing Choices SA, please click HCSA.
+  * If you would like to return to the HOUSING CHOICES website, please click EXIT.
   
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
-  - HCSA: exit
-    url: https://housingchoices.org.au/
-  - Menu: restart
+  - Exit:
+      code: |
+        Final_Screen
+back button: True
 ---
 event: hate_crime
 question: |
@@ -131,11 +129,13 @@ subquestion: |
   **If you have been a victim of hate crime, it is a police matter. If this happens to you, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:13 14 44">13 14 44</a> .**
   
   * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
-  * If you would like to return to the main menu, please click menu.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
-  - MENU: restart  
+  - Exit:
+      code: |
+        Final_Screen  
 back button: True
 --- 
 event: Vandalism
@@ -155,11 +155,13 @@ subquestion: |
   <hr>
   If you have been a victim of vandalism and require support you will need to inform Housing Choices SA on <a href="tel:1300 312 447">1300 312 447</a>  or via email on [infosa@hcsa.org.au](mailto:infosa@hcsa.org.au)
   
-  * If you would like to be redirected to the Housing Choices South Australia contact page, please click HCSA.
-  * If you would like to return to the main menu, please click menu. 
+  * If you would like to be redirected to the Housing Choices South Australia contact page, please click Contact HCSA.
+  * If you would like to return to the HOUSING CHOICES website, please click EXIT. 
 buttons:
-  - HCSA: exit
+  - Contact HCSA: exit
     url: https://www.housingchoices.org.au/contact-us-1
-  - MENU: restart  
+  - Exit:
+      code: |
+        Final_Screen  
 back button: True
 --- 
