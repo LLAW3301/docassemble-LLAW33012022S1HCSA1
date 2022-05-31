@@ -1,0 +1,25 @@
+--- 
+# definition of homelessness
+mandatory: True 
+question: |
+  Do you believe that you are experiencing homelessness?
+  
+  
+subquestion: |
+  Homelessness can be interpreted as a person who does not have suitable accomodation alternatives.
+  
+  If you believe you are experiencing homelessness please contact Housing Choices SA. 
+  
+  If you would like to be redirected to Housing Choices SA's contact page please click return.  
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+---
+features:
+  navigation back button: True
+  navigation: True 
+---
+mandatory: True
+question: |
+  If you would like to return to the main menu, please click menu. 
+---
