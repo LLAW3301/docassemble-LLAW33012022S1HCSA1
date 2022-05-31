@@ -21,6 +21,9 @@ subquestion: |
   <hr>
   For an index of other support services available to South Australian residents, click 
   the SA GOV button. 
+  <hr/>
+  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  <hr/>
 buttons:
   - Beyond Blue: exit
     url: https://www.beyondblue.org.au/

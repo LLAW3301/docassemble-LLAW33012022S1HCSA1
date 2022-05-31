@@ -6,8 +6,9 @@ subquestion: |
   These next few questions will take you through some steps in determining whether or not that noise is permitted or a problem.
   
   Please note that under the *Local Nuisance and Litter Control Act 2016* (SA) there are reasonable allowances for certain noises. The following questions will help you to determine whether or not you are dealing with an unreasonable local nuisance. If the noise is considered to be a disturbance we will refer you to the appropriate organisation to deal with the issue.
-  
+  <hr/>
   Please select continue to begin, or Exit to return to the HOUSING CHOICES website.
+  <hr/>
 buttons:
   - Continue:
       code: |
@@ -217,6 +218,7 @@ subquestion: |
   For noise generated, by an organisation such as a sporting club, a community meeting, church, or a business, all issues must be raised directly with the organisation.
   <hr/>
   * If you would like to return to the HOUSING CHOICES website, please click Exit.
+  <hr/>
 buttons:
   - Exit:
       code: |

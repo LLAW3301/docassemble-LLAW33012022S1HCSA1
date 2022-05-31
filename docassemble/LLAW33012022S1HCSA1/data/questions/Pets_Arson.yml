@@ -1,7 +1,7 @@
 ---
 #This is the initial page for when someone selects Pets
 event: DHdisplay_pets_one
-question: Pets
+question: Pets & Animals
 subquestion: |
   This form is to assist with neighbourhood disturbances including dangerous animals or animal activity.
   <hr>

@@ -32,7 +32,7 @@ subquestion: |
   information or output from this application is to be taken as formal legal advice. 
   If you are advised to take legal action, please consult with a lawyer or legal aid
   regarding your circumstances.
-  <hr>
+  <hr/>
   Please select from the options below
 #setting the buttons and their icons  
 buttons: 
@@ -72,7 +72,7 @@ buttons:
       code: |
         MGDisplay_Drugs
     image: Needle
-  - Homelessness:
+  - Homelessness & Squatting:
       code: |
         Homeless
     image: Homeless

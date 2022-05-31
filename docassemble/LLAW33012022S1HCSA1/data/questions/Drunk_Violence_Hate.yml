@@ -4,11 +4,13 @@ question: |
   Drunken behaviour 
 subquestion: |
   It is not a crime to be drunk, it only becomes illegal if the drunken behaviour is leading to criminal activity of any nature. Refer to our advice on **noise,** or **violence** for more details.
-  <hr>
+  <hr/>
   If you suspect any criminal activity, it is a police matter, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:131 444">13 14 44</a>.
+  <hr/>
+  *If you would like to be redirected to SA Police’s homepage, please click SAPOL*
   
-  * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
-  * If you would like to return to the HOUSING CHOICES website, please click Exit.
+  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  <hr/>
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
@@ -62,10 +64,10 @@ subquestion: |
   **Violence is a police matter and is a criminal offence. If this happens to you, you should contact the police IMMEDIATELY on <a href="tel:131 444">13 14 44</a> , and inform them if you are concerned about your safety.**
   
   <hr/>
-  * Click SAPOL to be redirected to the SA Police website.
+  *If you would like to be redirected to SA Police’s homepage, please click SAPOL*
   
-  * If you would like to return to the HOUSING CHOICES website, please click Exit.
-  
+  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  <hr/>
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
@@ -100,10 +102,10 @@ subquestion: |
   <hr/>  
   **Threatening to be violent, is a police matter and is a criminal offence. If this happens to you, you need to contact the Police IMMEDIATELY on <a href="tel:13 14 44">13 14 44</a> , and inform them if you are concerned about your safety.**
   <hr/>
-  * Click SAPOL to be redirected to the SA Police website.
+  *If you would like to be redirected to SA Police’s homepage, please click SAPOL*
   
-  * If you would like to return to the HOUSING CHOICES website, please click EXIT.
-  
+  *If you would like to return to the HOUSING CHOICES website, please click EXIT*
+  <hr/>
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
@@ -118,18 +120,20 @@ question: |
 subquestion: |
   Hate crime is a criminal offence committed against a person or property that is prompted in whole or in part by an offender's prejudice against a specific group of people. It includes discrimination against:
   
-  * Sex;
-  * Race;
-  * Age;
-  * Disability;
-  * Ethnicity; and
+  * Sex
+  * Race
+  * Age
+  * Disability
+  * Ethnicity
   * Religion
   
-  <hr>
+  <hr/>
   **If you have been a victim of hate crime, it is a police matter. If this happens to you, you need to contact the Police IMMEDIATELY to file a report on <a href="tel:13 14 44">13 14 44</a> .**
+  <hr/>
+  *If you would like to be redirected to SA Police’s homepage, please click SAPOL*
   
-  * If you would like to be redirected to SA Police’s homepage, please click SAPOL.
-  * If you would like to return to the HOUSING CHOICES website, please click Exit.
+  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  <hr/>
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
@@ -142,21 +146,23 @@ event: Vandalism
 question: |
   Vandalism 
 subquestion: |
-  Vandalism is ‘only illegal if it is done without the owner’s permission’. ‘This would include 
+  Vandalism is only illegal if it is done without the owner’s permission. This would include 
   
-  * writing, 
-  * drawing, 
-  * marking, 
-  * scratching, 
-  * etching, or 
-  * posting something on someone else’s property without their permission’. 
+  * writing 
+  * drawing 
+  * marking 
+  * scratching 
+  * etching or 
+  * posting something on someone else’s property without their permission 
   
   [More info](https://lsc.sa.gov.au/cb_pages/young_people_and_graffiti.php)
-  <hr>
+  <hr/>
   If you have been a victim of vandalism and require support you will need to inform Housing Choices SA on <a href="tel:1300 312 447">1300 312 447</a>  or via email on [infosa@hcsa.org.au](mailto:infosa@hcsa.org.au)
+  <hr/>
+  *If you would like to be redirected to the Housing Choices South Australia contact page, please click Contact HCSA*
   
-  * If you would like to be redirected to the Housing Choices South Australia contact page, please click Contact HCSA.
-  * If you would like to return to the HOUSING CHOICES website, please click EXIT. 
+  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  <hr/>
 buttons:
   - Contact HCSA: exit
     url: https://www.housingchoices.org.au/contact-us-1

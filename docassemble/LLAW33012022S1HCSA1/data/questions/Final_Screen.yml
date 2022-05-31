@@ -13,10 +13,11 @@ subquestion: |
   [1800RESPECT](https://www.1800respect.org.au/) **<a href="tel:1800 737 732">1800 737 732</a>** 
   <hr>
   Domestic Violence Crisis Line **<a href="tel:1800 800 098">1800 800 098</a>** 
-  <hr>
-  To return to the Housing Choices website, press exit.
+  <hr/>
+  *If you would like to return to the HOUSING CHOICES website, please click Exit*
   
-  To return and access more information on Better Tenant, press back.
+  *To return and access more information on Better Tenant, press back*
+  <hr/>
 buttons:
   - exit: exit
     url: https://www.housingchoices.org.au/
