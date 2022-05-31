@@ -7,7 +7,7 @@ subquestion: |
   This form is to assist with neighbourhood disturbances including dangerous animals or animal activity. </div>
   <hr>
   
-  * If the issue you are wishing to report is pertaining to **animal noise**, please select back then ‘noise’.;
+  * If the issue you are wishing to report is pertaining to **animal noise**, please select back then ‘noise’.
   
   <hr>
   What is the Animal behaviour that you are experiencing? 
@@ -17,15 +17,15 @@ buttons:
   - Aggresive Behaviour or Attack:
       code: |
         aggresive_behaviour_or_attack
-    image: Aggresive
+    image: Noimage
   - Defecation:
       code: |
         defecation
-    image: defecation
+    image: Noimage
   - Wandering:
       code: |
         wandering
-    image: wand
+    image: Noimage
 back button: True    
 ---
 #asking the user to select the category of information they'd like to see
@@ -66,11 +66,13 @@ subquestion: |
   ** The more information you are able to gather the more helpful this will be for the council to investigate.**
   
   * If you would like to be redirected to the council’s homepage, please click LGA.;
-  * If you would like to return to the main menu, please click menu.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
 buttons:  
   - LGA: exit
     url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
-  - MENU: restart
+  - Exit:
+      code: |
+        Final_Screen
 back button: True  
 ---
 #asking the user to select the category of information they'd like to see
@@ -82,11 +84,13 @@ subquestion: |
   <hr>
   * If you would like to be redirected to the council’s homepage, please click LGA.
   
-  * If you would like to return to the main menu, please click menu.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
 buttons:  
-  - Menu: restart
   - LGA: exit
     url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - Exit:
+      code: |
+        Final_Screen  
 back button: True
 ---
 #asking the user to select the category of information they'd like to see
@@ -101,15 +105,17 @@ subquestion: |
   If an animal is wondering at large in the neighbourhood, you will need to report it to your council.
 
   * If you would like to be redirected to the council’s homepage, please click LGA.
-  * If you would like to return to the main menu, please click menu.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
   * If you would like more info on the law about dogs and cats, please click INFO.
   <hr>
 buttons:
   - LGA: exit
     url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
-  - MENU: restart
   - INFO: exit
     url: https://www.legislation.sa.gov.au/__legislation/lz/c/a/dog%20and%20cat%20management%20act%201995/current/1995.15.auth.pdf
+  - Exit:
+      code: |
+        Final_Screen
 back button: True
 ---
 #this is the page for arson
@@ -133,20 +139,20 @@ back button: True
 event: DHdisplay_arson_two
 question: Reporting arson.
 subquestion: |
- **Arson is a police matter. If you are reporting a current incident, please IMMEDIATELY contact both Police and Fire Fighters on 000.**
- **If you have been a victim of arson and require support we recommend you contact Lifeline on 13 11 14 for counselling services.**
- * If you would like to be redirected to Lifeline Website, please click continue.;
- * If you would like to return to the main menu, please click menu.;
+ **Arson is a police matter. If you are reporting a current incident, please IMMEDIATELY contact both Police and Fire Fighters on <a href="000">000</a>.**
+ <hr>
+ **If you have been a victim of arson and require support we recommend you contact Lifeline on <a href="tel:131 444">13 11 14</a> for counselling services.**
  
- * For further information on Arson from SAPOL, please click more information.
+ * If you would like to be redirected to Lifeline Website, please click LifeLine.
+ * If you would like to return to the HOUSING CHOICES website, please click Exit.
+ * For further information on Arson from SAPOL, please click INFO.
 buttons:
-  - Continue: exit
+  - Lifeline: exit
     url: https://www.lifeline.org.au/
-  - Menu: DHIssue_menu
-  - Further Information: exit
+  - INFO: exit
     url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
+  - Exit:
+      code: |
+        Final_Screen
 back button: True    
----
-include:
-  - Final_Screen.yml
 ---
