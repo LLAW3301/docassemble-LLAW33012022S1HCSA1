@@ -76,7 +76,7 @@ buttons:
       code: |
         Homeless
     image: Homeless
-  - Trash Problems:
+  - Littering & Dumping:
       code: |
         Litter
     image: Litter
