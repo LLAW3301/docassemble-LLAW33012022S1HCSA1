@@ -1,0 +1,111 @@
+# this code facilitates the vehicles issue screens. Users will be directed to this after
+# selecting 'vehicles' from the issues menu screen. 
+---
+# This is the code block. From these ELIF statements it will direct the user to the
+# appropriate screen based on the user's responses on the selection screen. 
+mandatory: true
+code: |
+  if (CGBVehicle_issue == 'Vehicle Hooning'):
+    Vehicle_Hooning
+  elif (CGBVehicle_issue == 'Parking Dispute'):
+     Vehicle_Parking
+  elif (CGBVehicle_issue == 'Abandoned Vehicle'):
+      Vehicle_Abandoned
+---
+# This code block provides the user with options to select for which issue they
+# want information about. 
+mandatory: true
+question: Which issue are you encountering?
+fields:
+  - no label: CGBVehicle_issue
+    input type: radio
+    choices:
+      - Vehicle Hooning
+      - Parking Dispute
+      - Abandoned Vehicle
+---
+# This is the vehicle hooning block which provides information about what hooning is. 
+# It ends with exit links to the SAPOL website or back buttons to the issue menu.
+event: Vehicle_Hooning
+question: Vehicle Hooning
+subquestion: |
+  Vehicle hooning, or otherwise known as dangerous driving can look different, but 
+  often includes:
+  
+  * speeding
+  * burnouts/donuts
+  * excessive enginge revving 
+  * drag racing
+
+  All of these vehicle activities are illegal. If they are occuring contact SAPOL
+  immediately to report the incident. Information that is helpful for the report:
+  
+  * Date and Time
+  * Car Registration
+  * Location
+  
+  The SAPOL button below will direct you to their website to make a report, 
+  otherwise you can call 131 444 to get in contact with them quickly. 
+  
+  If you would like report another issue, select the back button to return to
+  the issue menu screen. 
+buttons: 
+  - Exit: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/services-and-events/make-a-report-to-the-police
+back button: true
+---
+# this block focuses on parking issues for residents. It ends with a exit link to the 
+# list of local Government councils. User's can return to the main menu via the back
+# button
+event: Vehicle_Parking
+question: Parking Disputes
+subquestion: |
+  If you are experiencing an issue between you and another neighbour or member
+  of your community, we would recommend discussing with them firstly to try and 
+  resolve it. 
+  
+  Assistance with confronting your neighbour can be found on the Housing Choices
+  SA webpage. Click the **mediation** button for that resource. 
+  
+  If the problem persists, then you are able to report the issue to your local council.
+  
+  To lodge a report with your council, select the **Local Council** button.
+buttons:
+  - Exit: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Mediation: exit
+    url: https://www.housingchoices.org.au/residents/south-australia/advocacy-services-and-resident-resources
+back button: true
+---
+# This block is to address abandoned vehicles. It is a display screen with exit and
+# back buttons. 
+event: Vehicle_Abandoned
+question: Abandoned Vehicles
+subquestion: |
+  Abandoned cars are vehicles that have been left in streets for a prolonged
+  amount of time which do not belong to any neighbours. 
+  
+  If you are wanting to report an abandoned vehicle you can do so through 
+  your local council. They are able to organise inspection and removal of 
+  the vehicle. 
+  
+  The details you will need to provide include:
+  
+  * registration number
+  * model, make, and colour of the vehicle
+  * approximate length of time the vehicle has been parked
+  
+  If you intend to make a report, please select the Local Council button below to
+  obtain your local council's details. If you wish to report another issue,
+  select the back button to return to the menu.
+buttons:
+  - Exit: Exit
+    url: https://housingchoices.org.au/residents/south-australia
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+back button: true
+---
