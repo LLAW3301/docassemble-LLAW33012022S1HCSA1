@@ -1,0 +1,112 @@
+---
+features:
+  css: prototype.css
+  debug: True
+  hide standard menu: False
+  navigation: True
+  go full screen: True
+---
+objects:
+  - BTlogo: DAStaticFile.using(filename='HCSA_Logo_White.png')
+---
+mandatory: True
+code: |
+  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
+---
+objects:
+  - endpoint: DADict
+---
+# This is the opening screen for our application. It simply displays a welcome message
+# for the user, and also contains a disclaimer about the app and it's limitations.
+# This screen is completed by two buttons which the user can select to either exit
+# or continue on to the next screen. 
+mandatory: true
+question: Welcome to *Better Tenant*
+subquestion: | 
+
+  **Better Tenant** is here to guide you to the appropriate authorities if you are
+  experiencing a significant distrubance in your neighbourhood.
+  
+  **Disclaimer**:
+  This app is specifically designed for Housing Choices Tenants. No 
+  information or output from this application is to be taken as formal legal advice. 
+  If you are advised to take legal action, please consult with a lawyer or legal aid
+  regarding your circumstances. 
+  
+  We look forward to helping you out. 
+buttons:
+  - Continue: continue
+  - Back to Housing Choices: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+---
+# This screen is the first point of user elimination. If the user is not from the 
+# state this app is designed for, then they will be redirected to a screen to advise
+# them of this. If they are from the specific state, it will direct them on to the 
+# next page, which is the issues menu. In future, this page could be used to direct
+# users to information from other states if HCSA wish to expand the app's use. 
+mandatory: true
+question: Residence
+subquestion: |
+  In Australia, different states and territories have specific rules about
+  how to address different situations. We need to know which state you are from
+  to ensure you are getting the correct advice!
+fields:
+  - Where do you live?: CGBstate
+    datatype: radio
+    choices:
+      - Western Australia
+      - Northern Territory
+      - South Australia
+      - Queensland
+      - Australian Capital Territory
+      - New South Wales
+      - Victoria
+      - Tasmania
+back button: true
+---
+# This code block causes the system to read the user's answer and push them along
+# to the resulting screen based on their data entry. 
+mandatory: true
+code: |
+  if CGBstate == 'South Australia':
+    DHIssue_Menu
+  else:
+    userineligible
+---
+# this screen will display if the user selects a region for which the app is not 
+# commissioned for. It is an information display screen with an exit and back button
+# so that if the user has made a mistake they can go back and correct it. 
+event: userineligible
+question: This app is currently unavailable in your region.
+subquestion: |
+  Unfortunately this app is not calibrated for your state. 
+  If you would like to see something similar produced for your state,
+  please contact your regional Housing Choices body.
+buttons:
+  - exit: exit
+back button: true
+---
+mandatory: True
+code: |
+   DHIssue_Menu
+---  
+code: |
+  DHIssue_Menu = True
+---
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib-site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: right">
+    <cite><small><i>
+    Developed by Flinders University in collaboration with Housing Choices SA
+    </i></small></cite>
+    </div>
+    </div>
+---
+include:
+  - DHimage_sets.yml
+  - issue_menu.yml
+  - Final_Screen.yml
+---
