@@ -7,10 +7,13 @@ subquestion: |
   
   If you believe you are experiencing homelessness, please contact Housing Choices SA who may be able to offer you some assistance. 
   
-  If you would like to be redirected to Housing Choices SA's contact page please click return.  
+  If you would like to be redirected to Housing Choices SA's contact page please click Contact US.  
 buttons:
-  - return: exit
+  - Contact US: exit
     url: https://www.housingchoices.org.au/residents/south-australia
+  - Exit:
+      code: |
+        Final_Screen  
 back button: True
 ---
 event: Litter
@@ -27,5 +30,8 @@ subquestion: |
 buttons:
   - Your Local Council: exit
     url: https://www.lga.sa.gov.au/sa-councils/councils-listing 
+  - Exit:
+      code: |
+        Final_Screen
 back button: True
 ---
