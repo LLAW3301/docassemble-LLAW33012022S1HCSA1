@@ -133,46 +133,59 @@ question: |
   <span class="VSSHeading">
   Issue Menu 
   </span>
-subquestion: |
-  #####<span class="VSSDisclaimer">Please select from the information below</span> 
+subquestion: | 
+  **Better Tenant** is here to guide you to the appropriate authorities if you are
+  experiencing a significant distrubance in your neighbourhood.
+  
+  Throughout this application there will be a variety of questions regarding the 
+  circumstances you are facing. If at any point you are unsure of the definition
+  or meaning of a word or term, hover your mouse over it to see the definitions. 
+  
+  **disclaimer** No information or output from this application is to be taken as 
+  formal legal advice. If you are advised to take legal action, please consult with 
+  a lawyer or legal aid regarding your circumstances. 
+  
+  We look forward to helping you out.
+  <hr>
+  Please select from the information below
 #setting the buttons and their icons  
 buttons: 
   - Pets:
       code: |
         DHdisplay_pets_one
-    image: Aggresive
+    image: pets
   - Noise:
       code: |
         MGnoise_welcome_page
-    image: defecation
+    image: noise
   - Vandalism:
       code: |
         Vandalism
-    image: wand
+    image: Vandalism
   - Hate Crime:
       code: |
         hate_crime
-    image: wand1
+    image: hate
   - Arson:
       code: |
         DHdisplay_arson_one
-    image: wand2
+    image: Arson
   - Drunk Behaviour:
       code: |
         Drunken_Behaviour_one
-    image: wand3
+    image: Drunk
   - Violence:
       code: |
         violence
-    image: wand
+    image: Violence
   - Hoarding:
       code: |
         MGDisplay_hoarding_screen
-    image: wand
+    image: Hoarding
   - Drug Use:
       code: |
         MGDisplay_Drugs
-    image: wand    
+    image: Needle    
 ---
 features:
   navigation back button: True
@@ -840,6 +853,9 @@ default screen parts:
     </i></small></cite>
     </div>
     </div>
+---
+include:
+  - DHimage_sets.yml
 ---
 features:  
   go full screen: True
