@@ -1,0 +1,152 @@
+---
+#This is the initial page for when someone selects Pets
+event: DHdisplay_pets_one
+question: Pets
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  This form is to assist with neighbourhood disturbances including dangerous animals or animal activity. </div>
+  <hr>
+  
+  * If the issue you are wishing to report is pertaining to **animal noise**, please select back then ‘noise’.;
+  
+  <hr>
+  What is the Animal behaviour that you are experiencing? 
+  </span>
+
+buttons: 
+  - Aggresive Behaviour or Attack:
+      code: |
+        aggresive_behaviour_or_attack
+    image: Aggresive
+  - Defecation:
+      code: |
+        defecation
+    image: defecation
+  - Wandering:
+      code: |
+        wandering
+    image: wand
+back button: True    
+---
+#asking the user to select the category of information they'd like to see
+event: aggresive_behaviour_or_attack
+question: |
+  <span class="VSSHeading">
+  **Information about aggressive behaviour/ animal attacks**
+  </span>
+subquestion: |
+  **If you have been the victim of an attack by an animal, seek immediate medical attention** 
+  
+  <div style="text-align: justify; text-justify: inter-word;">  
+  Once you can please report the incident to your local council. You will need to provide them with the following: </div>
+  <hr>
+  Information regarding the attack
+  
+  * Date
+  * Time
+  * Exact location
+  * Pictures of the damage caused
+  <hr>  
+  A description of the offending dog
+  
+  * Registration disc
+  * Name tag
+  * Breed
+  * Colour
+  * Sex
+  * Markings
+  <hr>
+  If the owner’s car was involved
+  
+  * Car registration number
+  * Make
+  * Model
+  * Colour
+  <hr>
+  ** The more information you are able to gather the more helpful this will be for the council to investigate.**
+  
+  * If you would like to be redirected to the council’s homepage, please click LGA.;
+  * If you would like to return to the main menu, please click menu.
+buttons:  
+  - LGA: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - MENU: restart
+back button: True  
+---
+#asking the user to select the category of information they'd like to see
+event: defecation
+question: Information about Defecation on premises 
+subquestion: |
+  <div style="text-align: justify; text-justify: inter-word;">  
+  If the animal is repeatedly defecating on your property, report it to your local council </div>
+  <hr>
+  * If you would like to be redirected to the council’s homepage, please click LGA.
+  
+  * If you would like to return to the main menu, please click menu.
+buttons:  
+  - Menu: restart
+  - LGA: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+back button: True
+---
+#asking the user to select the category of information they'd like to see
+event: wandering
+question: |
+  <span class="VSSHeading">
+  Information about Wandering 
+  </span>
+subquestion: | 
+  An animal is considered ‘wandering at large’ if in a public place, not a park, or a private property without the occupiers consent, or if in a public place with no one exercising effective control either by physical restraint or command 
+  <hr>
+  If an animal is wondering at large in the neighbourhood, you will need to report it to your council.
+
+  * If you would like to be redirected to the council’s homepage, please click LGA.
+  * If you would like to return to the main menu, please click menu.
+  * If you would like more info on the law about dogs and cats, please click INFO.
+  <hr>
+buttons:
+  - LGA: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - MENU: restart
+  - INFO: exit
+    url: https://www.legislation.sa.gov.au/__legislation/lz/c/a/dog%20and%20cat%20management%20act%201995/current/1995.15.auth.pdf
+back button: True
+---
+#this is the page for arson
+---
+#This is the initial page for Arson Completed by Daniel Hill-Brown
+event: DHdisplay_arson_one
+question: Arson
+subquestion: |
+  Arson is when property or motor vehicles are either intentionally or recklessly damaged. It is a serious offence and can be very scary for victims involved.
+  
+  **IT IS A CRIMINAL OFFENCE** You can find out more by clicking more [*information*](http://classic.austlii.edu.au/au/legis/sa/consol_act/clca1935262/s85.html#:~:text=(b)%20being%20recklessly%20indifferent%20as,Maximum%20penalty%3A%20Imprisonment%20for%20life.)
+  
+  IF you have witnessed or experinced arson at a HCSA property, please select CONTINUE.
+  
+buttons:
+  - Continue:
+      code: |
+        DHdisplay_arson_two
+back button: True
+---
+event: DHdisplay_arson_two
+question: Reporting arson.
+subquestion: |
+ **Arson is a police matter. If you are reporting a current incident, please IMMEDIATELY contact both Police and Fire Fighters on 000.**
+ **If you have been a victim of arson and require support we recommend you contact Lifeline on 13 11 14 for counselling services.**
+ * If you would like to be redirected to Lifeline Website, please click continue.;
+ * If you would like to return to the main menu, please click menu.;
+ 
+ * For further information on Arson from SAPOL, please click more information.
+buttons:
+  - Continue: exit
+    url: https://www.lifeline.org.au/
+  - Menu: DHIssue_menu
+  - Further Information: exit
+    url: https://www.police.sa.gov.au/__data/assets/pdf_file/0005/890078/arson_prevention_fact_sheet.pdf
+back button: True    
+---
+include:
+  - Final_Screen.yml
+---

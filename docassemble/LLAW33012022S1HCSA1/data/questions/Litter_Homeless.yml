@@ -1,0 +1,31 @@
+event: Homeless
+question: |
+  Do you believe that you are experiencing homelessness?
+    
+subquestion: |
+  Homelessness can be interpreted as a person who does not have suitable accomodation alternatives.
+  
+  If you believe you are experiencing homelessness, please contact Housing Choices SA who may be able to offer you some assistance. 
+  
+  If you would like to be redirected to Housing Choices SA's contact page please click return.  
+buttons:
+  - return: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
+back button: True
+---
+event: Litter
+question: |
+  Illegal Dumping or Excessive Litter information 
+  
+  
+subquestion: |
+  If you suspect another person of having disposed of litter without the consent of the owner or occupier, you should notify the relevant council. 
+  
+  You can lodge a complaint with your local council who can impose penalties if found that they were littering or illegally dumping.
+  
+  To be redirected to your local council's website please click Your Local Council.  
+buttons:
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing 
+back button: True
+---

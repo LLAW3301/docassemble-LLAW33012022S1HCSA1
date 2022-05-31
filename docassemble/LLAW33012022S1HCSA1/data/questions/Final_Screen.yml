@@ -1,0 +1,15 @@
+---
+event: Final_Screen
+question: Thank you For Using Better Tenant by Housing Choices!
+subquestion: |
+  We hope you have the found the information useful and informative.
+  
+  To return to the Housing Choices website, press exit.
+  
+  To return and access more information on Better Tenant, press back.
+buttons:
+  - exit: exit
+    url: https://www.housingchoices.org.au/
+    image: HCSA
+back button: True
+--- 
