@@ -1,0 +1,37 @@
+---
+# This code is a simple display screen with button links to websites that provide
+# the user with access to mental heatlh support services.
+event: mental_health
+question: Mental Health Care
+subquestion: |
+  Here are some resources available to you to assist you if you or someone you
+  know are struggling with mental health issues. All of them are available 24/7. 
+  <hr>
+  Beyond Blue is open 24 hours a day, 7 days a week. To contact them call <a href="tel:1300 224 636">1300 224 636</a>.
+  To visit their website, select the button below.
+  <hr>
+  Lifeline Australia are available on <a href="tel:131 114">131 114</a> for crisis support.
+  To visit their website, select the button below. 
+  <hr>
+  1800RESPECT is a helpline that provides counselling and services if you have been
+  effected by sexual assault. They are available on <a href="tel:1800 737 732">1800 737 732</a> or via the button below. 
+  <hr>
+  If you are experiencing Domestic Violence you can reach out to the Domestic Violence
+  Crisis Line on <a href="tel:1800 800 098">1800 800 098</a>. 
+  <hr>
+  For an index of other support services available to South Australian residents, click 
+  the SA GOV button. 
+buttons:
+  - Beyond Blue: exit
+    url: https://www.beyondblue.org.au/
+  - Lifeline: exit
+    url: https://www.lifeline.org.au/
+  - 1800RESPECT: exit
+    url: https://www.1800respect.org.au/
+  - SA GOV: exit
+    url: https://www.voc.sa.gov.au/help-and-resources/support-services
+  - Exit:
+      code: |
+        Final_Screen  
+back button: true
+---

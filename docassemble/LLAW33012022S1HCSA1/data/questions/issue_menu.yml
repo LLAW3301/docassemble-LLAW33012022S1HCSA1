@@ -13,9 +13,6 @@ mandatory: True
 code: |
   set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
 ---
-objects:
-  - endpoint: DADict
----
 mandatory: True
 code: |
    DHIssue_Menu
@@ -30,20 +27,13 @@ question: |
   Issue Menu 
   </span>
 subquestion: | 
-  **Better Tenant** is here to guide you to the appropriate authorities if you are
-  experiencing a significant distrubance in your neighbourhood.
-  
-  Throughout this application there will be a variety of questions regarding the 
-  circumstances you are facing. If at any point you are unsure of the definition
-  or meaning of a word or term, hover your mouse over it to see the definitions. 
-  
-  **disclaimer** No information or output from this application is to be taken as 
-  formal legal advice. If you are advised to take legal action, please consult with 
-  a lawyer or legal aid regarding your circumstances. 
-  
-  We look forward to helping you out.
+  **Disclaimer**:
+  This app is specifically designed for Housing Choices Tenants. No 
+  information or output from this application is to be taken as formal legal advice. 
+  If you are advised to take legal action, please consult with a lawyer or legal aid
+  regarding your circumstances.
   <hr>
-  Please select from the information below
+  Please select from the options below
 #setting the buttons and their icons  
 buttons: 
   - Pets:
@@ -102,6 +92,10 @@ buttons:
       code: |
         Vehicle00
     image: Vehicle
+  - Mental Health Resources:
+      code: |
+        mental_health
+    image: Mental
   - Exit:
       code: |
         Final_Screen
@@ -133,4 +127,5 @@ include:
   - Pets_Arson.yml
   - Sexual_theft.yml
   - Vehicle.yml
+  - Mental_health.yml
 ---

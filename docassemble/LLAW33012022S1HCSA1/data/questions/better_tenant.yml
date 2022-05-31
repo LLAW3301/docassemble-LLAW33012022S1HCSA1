@@ -13,42 +13,41 @@ mandatory: True
 code: |
   set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
 ---
-objects:
-  - endpoint: DADict
----
+# This is the opening screen for our application. It simply displays a welcome message
+# for the user, and also contains a disclaimer about the app and it's limitations.
+# This screen is completed by two buttons which the user can select to either exit
+# or continue on to the next screen. 
 mandatory: true
 question: Welcome to *Better Tenant*
 subquestion: | 
   **Better Tenant** is here to guide you to the appropriate authorities if you are
   experiencing a significant distrubance in your neighbourhood.
   
-  Throughout this application there will be a variety of questions regarding the 
-  circumstances you are facing. If at any point you are unsure of the definition
-  or meaning of a word or term, hover your mouse over it to see the definitions. 
-  
-  **disclaimer** No information or output from this application is to be taken as 
-  formal legal advice. If you are advised to take legal action, please consult with 
-  a lawyer or legal aid regarding your circumstances. 
+  **Disclaimer**:
+  This app is specifically designed for Housing Choices Tenants. No 
+  information or output from this application is to be taken as formal legal advice. 
+  If you are advised to take legal action, please consult with a lawyer or legal aid
+  regarding your circumstances. 
   
   We look forward to helping you out. 
 buttons:
   - Continue: continue
-  - Exit: exit
+  - Back to Housing Choices: exit
+    url: https://www.housingchoices.org.au/residents/south-australia
 ---
+# This screen is the first point of user elimination. If the user is not from the 
+# state this app is designed for, then they will be redirected to a screen to advise
+# them of this. If they are from the specific state, it will direct them on to the 
+# next page, which is the issues menu. In future, this page could be used to direct
+# users to information from other states if HCSA wish to expand the app's use. 
 mandatory: true
-question: Personal Details
+question: Residence
 subquestion: |
-  We need to collect some information about your living situation. 
-  Please answer all questions.
-  
-  Please Note that your personal information is protected by law, including the 
-  *Privacy  Act* of 1988.
+  In Australia, different states and territories have specific rules about
+  how to address different situations. We need to know which state you are from
+  to ensure you are getting the correct advice!
 fields:
-  - What is your name?: CGBname
-    datatype: string
-  - What is your age?: CGBage
-    datatype: integer
-  - Where do you Live?: CGBstate
+  - Where do you live?: CGBstate
     datatype: radio
     choices:
       - Western Australia
@@ -59,14 +58,20 @@ fields:
       - New South Wales
       - Victoria
       - Tasmania
+back button: true
 ---
+# This code block causes the system to read the user's answer and push them along
+# to the resulting screen based on their data entry. 
 mandatory: true
 code: |
   if CGBstate == 'South Australia':
-    CGBprovider
+    DHIssue_Menu
   else:
     userineligible
 ---
+# this screen will display if the user selects a region for which the app is not 
+# commissioned for. It is an information display screen with an exit and back button
+# so that if the user has made a mistake they can go back and correct it. 
 event: userineligible
 question: This app is currently unavailable in your region.
 subquestion: |
@@ -74,51 +79,10 @@ subquestion: |
   If you would like to see something similar produced for your state,
   please contact your regional Housing Choices body.
 buttons:
-  - restart: restart
-  - exit: exit
----
-question: Housing Provider
-fields:
-  - Who is your Housing Provider?: CGBprovider
-    datatype: radio
-    choices:
-      - Housing SA
-      - Anglicare
-      - Cornerstone
-      - Housing Choices SA
-      - Government Housing
-      - Other
----
-mandatory: true
-code: |
-  if CGBprovider == 'Housing Choices SA':
-    OFDname
-  else:
-    providerineligible
----
-event: providerineligible
-question: oops 
-subquestion: |
-  Sorry!
-  
-  This service is currently limited to Housing Choices SA tenants. 
-buttons:
-  - exit: exit
-  - restart: restart
----
-mandatory: true
-question: Offender Details
-subquestion: |
-  Please enter the details of the offender who is disturbing the community. 
-fields:
-  - Name: OFDname
-    required: false
-  - Age: OFDage
-    datatype: integer
-    required: false
-  - Address: OFDaddress
-  - Suburb: OFDsuburb
-  - Postcode: OFDpostcode
+  - Exit:
+      code: |
+        Final_Screen
+back button: true
 ---
 mandatory: True
 code: |
