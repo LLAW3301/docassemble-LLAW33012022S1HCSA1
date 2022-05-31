@@ -5,8 +5,8 @@ code: |
     Vehicle_Hooning
   elif (CGBVehicle_issue == 'Parking Dispute'):
      Vehicle_Parking
-  elif (CGBVehicle-issue == 'Abandoned Vehicle'):
-      Vehicle-Abandoned
+  elif (CGBVehicle_issue == 'Abandoned Vehicle'):
+      Vehicle_Abandoned
 ---
 mandatory: true
 question: Which vehicle-related activity do you want assistance with?
@@ -20,23 +20,86 @@ fields:
 back button: True
 ---
 event: Vehicle_Hooning
-question: If there is dangerous driving or *hooning* in your area, please BLANK
+question: Vehicle Hooning
+subquestion: |
+  Vehicle hooning, or otherwise known as dangerous driving can look different, but 
+  often includes:
+  
+  * speeding
+  * burnouts/donuts
+  * excessive enginge revving 
+  * drag racing
+  <hr>
+  All of these vehicle activities are illegal. If they are occuring contact SAPOL
+  immediately to report the incident. Information that is helpful for the report:
+  
+  * Date and Time
+  * Car Registration
+  * Location
+  <hr>
+  The SAPOL button below will direct you to their website to make a report, 
+  otherwise you can call <a href="131 444">131 444</a> to get in contact with them quickly. 
+  
+  If you would like report another issue, select the back button to return to
+  the issue menu screen.
+  
+  If you would like to return to the HOUSING CHOICES website, please select Exit.
 buttons: 
-  - Exit: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
+  - SAPOL: exit
+    url: https://www.police.sa.gov.au/
+  - Exit:
+      code: |
+        Final_Screen
 back button: true
 ---
 event: Vehicle_Parking
-question: If you are having a parking dispute please BLANK
+question: Parking Disputes
+subquestion: |
+  If you are experiencing an issue between you and another neighbour or member
+  of your community, we would recommend discussing with them firstly to try and 
+  resolve it. 
+  
+  Assistance with confronting your neighbour can be found on the Housing Choices
+  SA webpage. Click the **mediation** button for that resource. 
+  
+  If the problem persists, then you are able to report the issue to your local council.
+  
+  To lodge a report with your council, select the **Local Council** button.
 buttons:
-  - Exit: exit
-    url: https://www.housingchoices.org.au/residents/south-australia
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Mediation: exit
+    url: https://www.housingchoices.org.au/residents/south-australia/advocacy-services-and-resident-resources  
+  - Exit:
+      code: |
+        Final_Screen
 back button: true
 ---
 event: Vehicle_Abandoned
-question: If there is a abandoned vehicle in your area, please BLANK
+question: Abandoned Vehicles
+subquestion: |
+  Abandoned cars are vehicles that have been left in streets for a prolonged
+  amount of time which do not belong to any neighbours. 
+  
+  If you are wanting to report an abandoned vehicle you can do so through 
+  your local council. They are able to organise inspection and removal of 
+  the vehicle. 
+  
+  The details you will need to provide include:
+  
+  * registration number
+  * model, make, and colour of the vehicle
+  * approximate length of time the vehicle has been parked
+  
+  If you intend to make a report, please select the Local Council button below to
+  obtain your local council's details. If you wish to report another issue,
+  select the back button to return to the menu.
+
 buttons:
-  - exit: exit
-    url: https://housingchoices.org.au/residents/south-australia
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
+  - Exit:
+      code: |
+        Final_Screen
 back button: true
 ---
