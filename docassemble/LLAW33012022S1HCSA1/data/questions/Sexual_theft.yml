@@ -24,7 +24,7 @@ subquestion: |
   
   * Click Services Near Me to find support services near you
   
-  * Click on menu to select another issue.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
 
   
 buttons:
@@ -35,7 +35,9 @@ buttons:
     url: https://chat.1800respect.org.au/#/welcome
   - Services Near Me: exit
     url: https://www.1800respect.org.au/services
-  - Menu: restart
+  - Exit:
+      code: |
+        Final_Screen
 back button: true
 ---
 event: MGSexlaw
@@ -56,9 +58,9 @@ subquestion: |
 buttons:
   - SA Police <br/> contact information: exit
     url: https://www.police.sa.gov.au/
-  - Menu: restart
-  - exit: exit
-    url: https://housingchoices.org.au/
+  - Exit:
+      code: |
+        Final_Screen
 back button: true
 ---
 event: MGtheftwelcome
@@ -84,12 +86,14 @@ subquestion: |
   
   If someone has taken your property please click continue for more information
   
-  Press menu to return to select another issue.
+  If you would like to return to the HOUSING CHOICES website, please click Exit.
 buttons:
   - continue:
       code: |
         MGtheftfinalpage
-  - exit: exit
+  - Exit:
+      code: |
+        Final_Screen
 back button: True
 ---
 event: MGtheftfinalpage
@@ -101,14 +105,13 @@ subquestion: |
   
    * Click SAPOL to be redirected to the SA Police website.
   
-  * If you would like to return to the main menu, please click menu.
-  
-  * If you would like to visit Housing Choices SA, please click HCSA.
+  * If you would like to return to the HOUSING CHOICES website, please click Exit.
   
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
-  - Menu: restart
-  - HCSA: exit
-    url: https://housingchoices.org.au/
+  - Exit:
+      code: |
+        Final_Screen
+back button: True
 ---  
