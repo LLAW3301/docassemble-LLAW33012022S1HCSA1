@@ -85,6 +85,27 @@ buttons:
   - Homelessness:
       code: |
         Homeless
+    image: Homeless
+  - Trash Problems:
+      code: |
+        Litter
+    image: Litter
+  - Sexual Offences:
+      code: |
+        MGSexualoffences
+    image: Sexual
+  - Theft:
+      code: |
+        MGtheftwelcome
+    image: Theft
+  - Vehicle Issues:
+      code: |
+        Vehicle00
+    image: Vehicle
+  - Exit:
+      code: |
+        Final_Screen
+    image: HCSA
 ---
 features:
   navigation back button: True
