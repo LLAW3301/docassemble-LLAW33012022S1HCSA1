@@ -86,7 +86,7 @@ buttons:
     image: Sexual
   - Theft:
       code: |
-        MGtheftwelcome
+        MGtheftfinalpage
     image: Theft
   - Vehicle Issues:
       code: |

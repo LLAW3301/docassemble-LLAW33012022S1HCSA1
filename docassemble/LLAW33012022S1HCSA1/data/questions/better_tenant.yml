@@ -15,6 +15,16 @@ mandatory: True
 code: |
   set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
 ---
+metadata:
+  title: |
+    Better Tenant
+  description: |
+    A Guide for people experiencing Anti-Social Behaviour in Housing Choices SA properties
+  authors:
+    - name: Caitlin Bishop, Caitlin Aldous, Matthew Gunn, Tara Nuttall, Marteenah Abdalah Shonoodh and Daniel Hill-Brown
+      organization: Flinders University
+  revision_date: 2022-06-01
+---
 # This is the opening screen for our application. It simply displays a welcome message
 # for the user, and also contains a disclaimer about the app and it's limitations.
 # This screen is completed by two buttons which the user can select to either exit

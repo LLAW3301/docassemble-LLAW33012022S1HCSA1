@@ -1,3 +1,5 @@
+---
+#This code creates the first page for sexual offences
 event: MGSexualoffences
 question: Information about sexual offences.
 subquestion: |
@@ -18,13 +20,14 @@ subquestion: |
   
   1800 RESPECT is a confidential, 24-hour helpline for people who have experienced sexual assault. They have trained professionals who can talk to you about how you are feeling, and help you work out what you want to do next. You can also use their website to find a support service near you, or to chat to a support person online. 
   <hr/>
-  * Click on continue for more information.
+  *Click on continue for more information.*
 
-  * Click Online Support to be redirected to the 1800Respect online support service.
+  *Click Online Support to be redirected to the 1800Respect online support service.*
   
-  * Click Services Near Me to find support services near you
+  *Click Services Near Me to find support services near you.*
   
-  * If you would like to return to the HOUSING CHOICES website, please click Exit.
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
+  <hr/>
 
   
 buttons:
@@ -40,6 +43,7 @@ buttons:
         Final_Screen
 back button: true
 ---
+#This code creates the second page for sexual offences
 event: MGSexlaw
 question: What to do if you are sexually assaulted.
 subquestion: |
@@ -55,6 +59,10 @@ subquestion: |
   3. To collect medical evidence for possible prosecution.
   <hr/>
   
+  *To be redirected to South Australia Police Click SAPOL.*
+  
+  *If you would like to return to the HOUSING CHOICES website, please click EXIT.*
+  <hr/>
 buttons:
   - SA Police <br/> contact information: exit
     url: https://www.police.sa.gov.au/
@@ -63,39 +71,6 @@ buttons:
         Final_Screen
 back button: true
 ---
-event: MGtheftwelcome
-question: Has someone taken your property?
-subquestion: |
-
-  **This guide will explain the laws around theft in South Australia, and what you can do when your property has been taken**
-  <hr/>
-  Under the *Criminal Law Consolidation Act* (SA) 1935 a person is guilty of theft if they deal with your property
-  
-  1. Dishonstly; and
-  
-  2. Without your consent; and
-  
-  3. They intend to: deprive you permanently of the property; OR make a serious encroachment on your proprietary rights 
-  
-  A person intends to make a serious encroachment if the person intends
-  
-  1. To treat the property as his or her own to dispose of regardless of the owner's rights; or
-  
-  2. To deal with the property in a way that creates a substantial risk that: you will not get the property back; OR that when the owner gets it back, its value will be substantially impaired.
-  <hr/>
-  
-  If someone has taken your property please click continue for more information
-  
-  If you would like to return to the HOUSING CHOICES website, please click Exit.
-buttons:
-  - continue:
-      code: |
-        MGtheftfinalpage
-  - Exit:
-      code: |
-        Final_Screen
-back button: True
----
 event: MGtheftfinalpage
 question: Information about theft
 subquestion: |
@@ -103,10 +78,10 @@ subquestion: |
   **Theft is a police matter and is a criminal offence. If this happens to you, you should report the matter to police IMMEDIATELY on** <a href="tel:131 444">13 14 44</a>.
   <hr/>
   
-   * Click SAPOL to be redirected to the SA Police website.
+   *Click SAPOL to be redirected to the South Australian Police website.*
   
-  * If you would like to return to the HOUSING CHOICES website, please click Exit.
-  
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
+  <hr/>
 buttons:
   - SAPOL: exit
     url: https://www.police.sa.gov.au/
