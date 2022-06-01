@@ -1,6 +1,16 @@
 ---
 #This is the initial page for when someone selects Pets
 event: DHdisplay_pets_one
+mandatory: True
+code: |
+ 
+  if (DH_pets == 'Aggresive Behaviour or Attack'):
+    aggresive_behaviour_or_attack
+  elif (DH_pets == 'Defecation'):
+    defecation
+  elif (DH_pets == 'Wandering'):
+    wandering
+---    
 question: Pets & Animals
 subquestion: |
   This form is to assist with neighbourhood disturbances including dangerous animals or animal activity.
@@ -9,20 +19,14 @@ subquestion: |
   * If the issue you are wishing to report is pertaining to **animal noise**, please select back then ‘noise’.
   
   <hr>
-  What is the Animal behaviour that you are experiencing? 
-buttons: 
-  - Aggresive Behaviour or Attack:
-      code: |
-        aggresive_behaviour_or_attack
-    image: Noimage
-  - Defecation:
-      code: |
-        defecation
-    image: Noimage
-  - Wandering:
-      code: |
-        wandering
-    image: Noimage
+  What is the Animal behaviour that you are experiencing?
+fields:
+  - no label: DH_pets
+    input type: radio
+    choices:
+     - Aggresive Behaviour or Attack
+     - Defecation
+     - Wandering  
 back button: True    
 ---
 #asking the user to select the category of information they'd like to see
