@@ -1,3 +1,4 @@
+# Setting the standard text to be applied through better tenant, through the css prototype file. In addition this sets the colour and colour transitions of all buttons on better tenant. All colours and buttons are based off the same text and colours and button behaviour found on the Housing Choices website.
 ---
 features:
   css: prototype.css
@@ -6,6 +7,7 @@ features:
   navigation: True
   go full screen: True
 ---
+# sets the logo for better Tenant with reference to the png file in the static files.
 objects:
   - BTlogo: DAStaticFile.using(filename='HCSA_Logo_White.png')
 ---
@@ -91,6 +93,7 @@ code: |
 code: |
   DHIssue_Menu = True
 ---
+# Establishes that the Flinders accreditation is displayed on every single page of better tenant, and that the application was created in colaboration with Housing Choices.
 default screen parts:
   post: |
     <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
@@ -103,6 +106,7 @@ default screen parts:
     </div>
     </div>
 ---
+# sets the pages that this page will derive information from.
 include:
   - DHimage_sets.yml
   - issue_menu.yml
