@@ -1,4 +1,5 @@
 ---
+# This is the Drunken Behaviour page which includes phone links for various sites and button links to a number of websites and an exit link to the Final Screen Page.
 event: Drunken_Behaviour_one 
 question: |
   Drunken behaviour 
@@ -114,6 +115,7 @@ buttons:
         Final_Screen
 back button: True
 ---
+# This Hate Crime page includes telephone links to the 13 14 14 number and button links to the South Australian Police Home page. It also has a link to the Final Screen Page.
 event: hate_crime
 question: |
   Hate Crime Information. 
@@ -141,7 +143,8 @@ buttons:
       code: |
         Final_Screen  
 back button: True
---- 
+---
+# This page contains the information for Vandalism, which has in text information links plus a telephone and email with button links to the Housing Choices Contact detail page. This page also directed people to the final screen page.
 event: Vandalism
 question: |
   Vandalism 
