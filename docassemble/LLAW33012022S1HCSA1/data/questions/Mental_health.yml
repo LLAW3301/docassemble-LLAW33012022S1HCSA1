@@ -6,23 +6,23 @@ question: Mental Health Care
 subquestion: |
   Here are some resources available to you to assist you if you or someone you
   know are struggling with mental health issues. All of them are available 24/7. 
-  <hr>
+  <hr/>
   Beyond Blue is open 24 hours a day, 7 days a week. To contact them call <a href="tel:1300 224 636">1300 224 636</a>.
   To visit their website, select the button below.
-  <hr>
-  Lifeline Australia are available on <a href="tel:131 114">131 114</a> for crisis support.
+  <hr/>
+  Lifeline Australia are available on <a href="tel:13 11 14">13 11 14</a> for crisis support.
   To visit their website, select the button below. 
-  <hr>
+  <hr/>
   1800RESPECT is a helpline that provides counselling and services if you have been
-  effected by sexual assault. They are available on <a href="tel:1800 737 732">1800 737 732</a> or via the button below. 
-  <hr>
+  affected by sexual assault. They are available on <a href="tel:1800 737 732">1800 737 732</a> or via the button below. 
+  <hr/>
   If you are experiencing Domestic Violence you can reach out to the Domestic Violence
   Crisis Line on <a href="tel:1800 800 098">1800 800 098</a>. 
-  <hr>
+  <hr/>
   For an index of other support services available to South Australian residents, click 
   the SA GOV button. 
   <hr/>
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>
 buttons:
   - Beyond Blue: exit

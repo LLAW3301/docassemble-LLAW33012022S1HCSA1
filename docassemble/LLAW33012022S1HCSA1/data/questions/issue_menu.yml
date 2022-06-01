@@ -1,7 +1,7 @@
 ---
 features:
   css: prototype.css
-  debug: True
+  debug: False
   hide standard menu: False
   navigation: True
   go full screen: True

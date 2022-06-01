@@ -1,16 +1,17 @@
+---
 event: Homeless
 question: Homelessness/ Squatting
 subquestion: |
-  A squatter is someone who trespasses on someone else's property and begins living there without permission. They are not tenants, there is no lease, and they have no legal right to remain there, this practice is illegal in South Australia.
-  
+  A squatter is someone who trespasses on someone else's property and begins living there without permission. They are not tenants, there is no lease, and they have no legal right to remain there. This practice is illegal in South Australia.
+  <hr/>
   **If you believe someone is squatting at a property nearby, please contact Housing Choices South Australia directly.**
   <hr/>
-  *If you would like to be redirected to Housing Choices SA's contact page, please click Contact US*
+  *If you would like to be redirected to Housing Choices SA's contact page, please click Contact Us.*
   
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>
 buttons:
-  - Contact US: exit
+  - Contact Us: exit
     url: https://www.housingchoices.org.au/residents/south-australia
   - Exit:
       code: |
@@ -24,9 +25,9 @@ subquestion: |
   
   You can lodge a complaint with your local council who can impose penalties if found that they were littering or illegally dumping.
   <hr/>
-  *To be redirected to your local council's website please click Your Local Council*
+  *To be redirected to your local council's website, please click Your Local Council.*
   
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>
 buttons:
   - Your Local Council: exit

@@ -25,25 +25,24 @@ subquestion: |
   Vehicle hooning, or otherwise known as dangerous driving can look different, but 
   often includes:
   
-  * speeding
-  * burnouts/donuts
-  * excessive enginge revving 
-  * drag racing
+  * Speeding.
+  * Burnouts/donuts.
+  * Excessive engine revving. 
+  * Drag racing.
   <hr/>
-  All of these vehicle activities are illegal. If they are occuring contact SAPOL
-  immediately to report the incident. Information that is helpful for the report:
+  All of these vehicle activities are illegal. If they are occuring contact South Australian Police immediately to report the incident. Information that is helpful for the report:
   
-  * Date and Time
-  * Car Registration
-  * Location
+  * Date and time.
+  * Car registration.
+  * Location.
   <hr/>
-  The SAPOL button below will direct you to their website to make a report, 
-  otherwise you can call <a href="131 444">131 444</a> to get in contact with them quickly. 
+  **The SAPOL button below will direct you to their website to make a report, 
+  otherwise you can call <a href="131 444">131 444</a> to get in contact with them quickly.** 
   <hr/>
   *If you would like report another issue, select the back button to return to
-  the issue menu screen*
+  the issue menu screen.*
   
-  *If you would like to return to the HOUSING CHOICES website, please select Exit*
+  *If you would like to return to the HOUSING CHOICES website, please select Exit.*
   <hr/>
 buttons: 
   - SAPOL: exit
@@ -57,7 +56,7 @@ event: Vehicle_Parking
 question: Parking Disputes
 subquestion: |
   If you are experiencing an issue between you and another neighbour or member
-  of your community, we would recommend discussing with them firstly to try and 
+  of your community, we would recommend discussing with them first to try and 
   resolve it. 
   
   Assistance with confronting your neighbour can be found on the Housing Choices
@@ -65,7 +64,11 @@ subquestion: |
   
   If the problem persists, then you are able to report the issue to your local council.
   <hr/>
-  To lodge a report with your council, select the **Local Council** button.
+  *To lodge a report with your council, select the **Local Council** button.*
+  
+  *If you wish to report another issue, select the back button to return to the menu.*
+  
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>
 buttons:
   - Your Local Council: exit
@@ -89,13 +92,15 @@ subquestion: |
   
   The details you will need to provide include:
   
-  * registration number
-  * model, make, and colour of the vehicle
-  * approximate length of time the vehicle has been parked
+  * Registration number.
+  * Model, make, and colour of the vehicle.
+  * Approximate length of time the vehicle has been parked.
   <hr/>
-  If you intend to make a report, please select the Local Council button below to
-  obtain your local council's details. If you wish to report another issue,
-  select the back button to return to the menu.
+  *If you intend to make a report, please select the Local Council button below to obtain your local council's details.* 
+  
+  *If you wish to report another issue, select the back button to return to the menu.*
+  
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>
 buttons:
   - Your Local Council: exit

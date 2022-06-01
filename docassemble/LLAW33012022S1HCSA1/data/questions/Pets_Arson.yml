@@ -10,15 +10,16 @@ code: |
     defecation
   elif (DH_pets == 'Wandering'):
     wandering
----    
+---
+# This is the Pets page which includes a field direction to the other relevant pages.
 question: Pets & Animals
 subquestion: |
   This form is to assist with neighbourhood disturbances including dangerous animals or animal activity.
-  <hr>
+  <hr/>
   
   * If the issue you are wishing to report is pertaining to **animal noise**, please select back then ‘noise’.
   
-  <hr>
+  <hr/>
   What is the Animal behaviour that you are experiencing?
 fields:
   - no label: DH_pets
@@ -33,43 +34,43 @@ back button: True
 event: aggresive_behaviour_or_attack
 question: Information about aggressive behaviour/ animal attacks
 subquestion: |
-  **If you have been the victim of an attack by an animal, seek immediate medical attention and call <a href="000">000</a> for Police and Ambulance Services** 
+  **If you have been the victim of an animal attack, seek immediate medical attention.** 
     
   Once you can please report the incident to your local council. You will need to provide them with the following:
-  <hr>
-  Information regarding the attack
+  <hr/>
+  Information regarding the attack:
   
-  * Date
-  * Time
-  * Exact location
-  * Pictures of the damage caused
-  <hr>  
-  A description of the offending dog
+  * Date.
+  * Time.
+  * Exact location.
+  * Pictures of the damage caused.
+  <hr/>  
+  A description of the offending dog:
   
-  * Registration disc
-  * Name tag
-  * Breed
-  * Colour
-  * Sex
-  * Markings
-  <hr>
-  If the owner’s car was involved
+  * Registration disc.
+  * Name tag.
+  * Breed.
+  * Colour.
+  * Sex.
+  * Markings.
+  <hr/>
+  If the owner’s car was involved:
   
-  * Car registration number
-  * Make
-  * Model
-  * Colour
+  * Car registration number.
+  * Make.
+  * Model.
+  * Colour.
 
   ** The more information you are able to gather the more helpful this will be for the council to investigate.**
-  <hr>
+  <hr/>
   
-  *If you would like to be redirected to the council’s homepage, please click LGA*
+  *To be redirected to your local council's website, please click Your Local Council.*
   
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
-  
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
+  <hr/>
 buttons:
-  - LGA: exit
-    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
   - Exit:
       code: |
         Final_Screen
@@ -80,13 +81,14 @@ event: defecation
 question: Information about Defecation on premises 
 subquestion: |  
   If the animal is repeatedly defecating on your property, report it to your local council.
-  <hr>
-  *If you would like to be redirected to the council’s homepage, please click LGA*
+  <hr/>
+  *To be redirected to your local council's website, please click Your Local Council.*
   
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
+  <hr/>
 buttons:  
-  - LGA: exit
-    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
   - Exit:
       code: |
         Final_Screen  
@@ -96,20 +98,21 @@ back button: True
 event: wandering
 question: Information about Wandering 
 subquestion: | 
-  An animal is considered ‘wandering at large’ if in a public place, not a park, or a private property without the occupiers consent, or if in a public place with no one exercising effective control either by physical restraint or command 
-  <hr>
-  If an animal is wondering at large in the neighbourhood, you will need to report it to your council.
-  <hr>
-  *If you would like to be redirected to the council’s homepage, please click LGA*
+  An animal is considered ‘wandering at large’ if:
   
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  * In a public place.
+  * On a private property without the occupiers consent. 
+  * In a public place with no one exercising effective control either by physical restraint or command. 
+  <hr/>
+  **If an animal is wandering at large in the neighbourhood, you will need to report it to your council.**
+  <hr/>
+  *To be redirected to your local council's website, please click Your Local Council.*
   
-  *If you would like more info on the law about dogs and cats, please click INFO*
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
+  <hr/>
 buttons:
-  - LGA: exit
-    url: https://www.lga.sa.gov.au/sa-councils/councils-listing#:~:text=If%20you%20require%20further%20information,or%20phone%2008%208224%202000
-  - INFO: exit
-    url: https://www.legislation.sa.gov.au/__legislation/lz/c/a/dog%20and%20cat%20management%20act%201995/current/1995.15.auth.pdf
+  - Your Local Council: exit
+    url: https://www.lga.sa.gov.au/sa-councils/councils-listing
   - Exit:
       code: |
         Final_Screen
@@ -122,17 +125,15 @@ event: DHdisplay_arson_one
 question: Reporting arson.
 subquestion: |
   Arson is when property or motor vehicles are either intentionally or recklessly damaged. It is a serious offence and can be very scary for victims involved.
-  <hr>
-  **Arson is a police matter. If you are reporting a current incident, please IMMEDIATELY contact both Police and Fire Fighters on <a href="000">000</a>.**
-  <hr>
-  You can anonymously report anything you have witnessed related to Arson via Crime Stoppers on 	<a href="1800 333 000">1800 333 000</a> or contact police on <a href="131 444">131 444</a>.
-  
+  <hr/>
+  **Arson is a police matter. You can anonymously report anything you have witnessed related to arson via Crime Stoppers on <a href="1800 333 000">1800 333 000</a> or contact police on <a href="131 444">131 444</a>.**
+  <hr/>
   If you have been a victim of arson and require support we recommend you contact Lifeline on <a href="tel:131 444">13 11 14</a> for counselling services.
-  <hr>
+  <hr/>
  
-  *If you would like to be redirected to Lifeline Website, please click LifeLine*
+  *If you would like to be redirected to the Lifeline Website, please click Lifeline.*
   
-  *If you would like to return to the HOUSING CHOICES website, please click Exit*
+  *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr>
 buttons:
   - Lifeline: exit
