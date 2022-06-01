@@ -1,3 +1,4 @@
+# This is the Final Screen, where ultimatly, if the User hasn't exitted the page trhough one of the other link, they will be directed here, to some useful resources and the Exit button to HCSA.
 ---
 event: Final_Screen
 question: Thank you For Using Better Tenant by Housing Choices!
@@ -8,11 +9,13 @@ subquestion: |
   <hr/>
   [Beyond Blue](https://www.beyondblue.org.au/)  **<a href="tel:1300 224 636">1300 224 636</a>**.
   <hr/>
-  [Lifeline Australia](https://www.lifeline.org.au/) **<a href="tel:131 114">131 114</a>** 
+  [Lifeline Australia](https://www.lifeline.org.au/) **<a href="tel:13 11 14">13 11 14</a>** 
   <hr/>
   [1800RESPECT](https://www.1800respect.org.au/) **<a href="tel:1800 737 732">1800 737 732</a>** 
   <hr/>
   Domestic Violence Crisis Line **<a href="tel:1800 800 098">1800 800 098</a>** 
+  <hr/>
+  [Legal Services Commission SA](https://lsc.sa.gov.au/) **<a href="tel:1300 366 424">1300 366 424</a>**
   <hr/>
   *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   

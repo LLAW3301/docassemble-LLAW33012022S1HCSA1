@@ -1,3 +1,4 @@
+# This page details the squatter information. It will direct users either to the Housing Choices Contact Page or our Final Screen.
 ---
 event: Homeless
 question: Homelessness/ Squatting
@@ -17,6 +18,8 @@ buttons:
       code: |
         Final_Screen  
 back button: True
+---
+# This page details the Litter information. It will direct users either to the South Australian Local Council's council listing page or our Final Screen.
 ---
 event: Litter
 question: Illegal Dumping or Excessive Litter information 

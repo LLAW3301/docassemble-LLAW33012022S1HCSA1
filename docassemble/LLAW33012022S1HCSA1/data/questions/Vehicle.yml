@@ -1,3 +1,5 @@
+# This is the vehicle page where User will be directed to one of three pages. These pages have links to various services including South Australian Police and Local Council Services links. Each option includes an Exit link that will direct users to the final screen.
+---
 event: Vehicle00
 mandatory: true
 code: |
@@ -39,9 +41,6 @@ subquestion: |
   **The SAPOL button below will direct you to their website to make a report, 
   otherwise you can call <a href="131 444">131 444</a> to get in contact with them quickly.** 
   <hr/>
-  *If you would like report another issue, select the back button to return to
-  the issue menu screen.*
-  
   *If you would like to return to the HOUSING CHOICES website, please select Exit.*
   <hr/>
 buttons: 
@@ -65,8 +64,6 @@ subquestion: |
   If the problem persists, then you are able to report the issue to your local council.
   <hr/>
   *To lodge a report with your council, select the **Local Council** button.*
-  
-  *If you wish to report another issue, select the back button to return to the menu.*
   
   *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>
@@ -97,8 +94,6 @@ subquestion: |
   * Approximate length of time the vehicle has been parked.
   <hr/>
   *If you intend to make a report, please select the Local Council button below to obtain your local council's details.* 
-  
-  *If you wish to report another issue, select the back button to return to the menu.*
   
   *If you would like to return to the HOUSING CHOICES website, please click Exit.*
   <hr/>

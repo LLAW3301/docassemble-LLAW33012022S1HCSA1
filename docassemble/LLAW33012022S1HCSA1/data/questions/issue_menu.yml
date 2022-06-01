@@ -20,12 +20,9 @@ code: |
 code: |
   DHIssue_Menu = True
 ---
-#asking the user to select the category of information they'd like to see
+#asking the user to select the category of information they'd like to see from our 16 selection point, including a HCSA exit button that will link to our Final Screen.
 event: DHIssue_Menu
-question: |
-  <span class="VSSHeading">
-  Issue Menu 
-  </span>
+question: Issue Menu 
 subquestion: | 
   **Disclaimer**:
   This app is specifically designed for Housing Choices Tenants. No 
@@ -101,10 +98,12 @@ buttons:
         Final_Screen
     image: HCSA
 ---
+# establishing navigation through the page as True and most importantly, the existance of back buttons, that are used throughout Better Tenant.
 features:
   navigation back button: True
   navigation: True
 ---
+# Adding the Flinders Development Information.
 default screen parts:
   post: |
     <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
@@ -117,6 +116,7 @@ default screen parts:
     </div>
     </div>
 ---
+# This provides the Issue menu with all the other yml's it will need to link to in one place.
 include:
   - DHimage_sets.yml
   - Drug_Hoarding.yml
